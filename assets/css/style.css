@@ -17,3 +17,17 @@
     margin: 15% 0 0 5%;
 }
   
+#skills_img{
+    width: 15rem;
+    height: 15rem;
+}
+
+#portafolio_img{
+    width: 100%;
+    height: 85%;
+}
+
+#footericon{
+    width: 2rem;
+    height: 2rem;
+}
