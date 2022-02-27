@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+nav{
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+nav h1{
+    padding: 0.25em 0;
+}
+
+.hero-section{
+    background: url("../img/imgip/bg-header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30% 50%;
+}
+
+article{
+    background-color: #000000;
+    color:#FFFFFF;
+    text-align: center;
+}
+
+article .art-prin{
+    display: inline-block;
+    text-align: left;
+    width: 30.5em;
+    margin: 3rem 0; 
+    vertical-align: middle;
+}
+
+article p{
+    vertical-align: center;
+    font-weight: 300;
+}
+
+article img{
+    height: 15em;
+    margin-left: 9em;
+}
+
+.section-1{
+    background-color: #1E1A13;
+    opacity: 0.95;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 4em 0;
+}
+
+.section-1 h1{
+    padding-bottom: 0.5em;
+}
+
+.section-1 div{
+    display: inline-block;
+    padding: 2em 5em 0 8em;
+}
+
+.section-1 h2{
+    padding-top: 0.75em;
+    font-weight: 300;
+}
+
+.section-2{
+    background-color: #000000;
+    opacity: 0.96;
+    text-align: center;
+}
+
+.section-2 div{
+    display: inline-block;
+    padding: 4em 0 4em 0.75em;
+}
+
+.section-2 img{
+    width: 17.5em; height: 10em;
+}
+
+footer{
+    background-color: #1E1A13;
+    opacity: 0.95;
+    text-align: center;
+    padding: 2em 0;
+}
+
+footer p, a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 300;
+}

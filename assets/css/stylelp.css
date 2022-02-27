@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    }
+
+body{
+    font-family: "Audiowide", sans-serif;
+}
+
+.hero-section{
+    background-image: url("../img/imglp/chero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+    color:white;
+    text-shadow: 4px 4px 4px gray;
+    padding: 10% 5%;
+}
+
+.productsection{
+    text-align: center;
+}
+
+.productsection div{
+    border: 1px solid black;
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.productsection img{
+    width:25em; height:25em;
+}
+
+.ubicationsection{
+    background-color: grey;
+    text-align: center;  
+    padding-bottom: 1em;
+}
+
+.ubicationsection div{
+    display: inline-block;
+    margin-left: 3em;
+}
+
+.ubicationsection img{
+    padding-top: 0.3em;
+    width:15em; height:15em;
+}
+
+
+
+.navigation{
+    text-align: center;    
+    background-color: rgb(255, 227, 168);
+}
+
+.navigation a{
+    color:#969090;
+    text-decoration: none;
+}
+
+.navigation div{
+    display: inline-block;
+    padding: 1rem 2rem;
+}
+
+nav{
+    position: fixed;
+    width: 100vw;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+.texto_centrado{
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.productsection, .ubicationsection{
+    margin-top: 50px
+}
+
+footer{
+    background-color: black;
+    color: #ffffff;
+}
+
+.footsection{
+    text-align: left;
+}
+
+.footsection div{
+    display: inline-block;
+    margin-right: 3em;
+    margin-left: 1em;
+}
+
+.footsection img{
+    width: 2em; height: 2em;
+}

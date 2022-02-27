@@ -1,0 +1,47 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.dp-po{
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: line-through;
+
+}
+
+.dp-pd{
+    display: inline-block;
+    color: #28a745;
+    font-weight: bold;
+    font-size: 1.25rem;
+    vertical-align: middle;
+    padding: 0 1.5rem;
+}
+
+.card-text{
+    font-weight: bold;
+}
+
+.centrado{
+    text-align: center;
+}
+
+.prdtc-name{
+    font-size: 0.75rem;
+    padding: 0;
+}
+
+svg{
+    width: 0.75rem;
+    color: #a9a9a9;
+}
+
+.ubi{
+    padding: 0;
+}
+
+.ubi-cont{
+    display: inline-block;
+    font-size: 0.75rem;
+    margin: 0;
+}
