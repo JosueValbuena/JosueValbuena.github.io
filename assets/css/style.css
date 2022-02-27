@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Merienda', cursive;
+}
+
 #Hero-Section {
     background-image: url("../img/bg-hero.jpg");
     background-repeat: no-repeat;
