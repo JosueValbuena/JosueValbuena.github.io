@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <title>Josue Valbuena Portafolio</title>
+  <title>Josue Valbuena Web</title>
 
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -16,167 +16,229 @@
 
 <body>
 
-  <!-- Hero section -->
+  <div class="container">
 
-  <header class="hero--section">
+    <!-- Hero section -->
 
-    <div class="hero--section intro">
+    <header class="hero--section">
 
-      <div>
-        <p>!Hola¡</p>
-        <p>Soy Josué Valbuena</p>
-        <p>Desarrollador Web</p>
+      <div class="hero--section intro">
+
+        <div>
+          <p>!Hola¡</p>
+          <p>Soy Josué Valbuena</p>
+          <p>Desarrollador Web</p>
+        </div>
+
+        <div>
+          <img src="/assets/img/profileimg.jpeg" class="me-5 " alt="html icono" id="profile_img">
+        </div>
+
       </div>
 
-      <div>
-        <img src="/assets/img/profileimg.jpeg" class="me-5 " alt="html icono" id="profile_img">
-      </div>
+      <!-- Navbar -->
 
-    </div>
-
-    <!-- Navbar -->
-
-    <!--  <nav class="navbar">
+      <!--  <nav class="navbar">
       <a href="" class="logo">JV</a>
       <div>
         <a href="">Portafolio <i class="fa-solid fa-terminal"></i></a>
       </div>
     </nav> -->
 
-    <!-- Navbar -->
+      <!-- Navbar -->
 
-    <nav class="navbar">
-      <h1>JV</h1>
+      <nav class="navbar">
 
-      <div>
-        <input type="checkbox" class="checkbox">
-        <i class="fa-solid fa-bars navbar--icons"></i>
-        <i class="fa-solid fa-xmark navbar--icons"></i>
-  
-        <ul class="menu">
-          <li><a href="#">EDUCACION</a></li>
-          <li><a href="#">HABILIDADES</a></li>
-          <li><a href="#">PROYECTOS</a></li>
-          <li><a href="#">EXPERIENCIA</a></li>
-          <li><a href="#">CONTACTO</a></li>
+        <a href="#">JV</a>
+
+        <button class="navbar__toggle">
+          <i class="fa-solid fa-bars navbar--icons"></i>
+        </button>
+        <!-- <input type="checkbox" class="checkbox">
+      <i class="fa-solid fa-bars navbar--icons"></i>
+      <i class="fa-solid fa-xmark navbar--icons"></i> -->
+
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#">HABILIDADES</a></li>
+          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#">EDUCACION</a></li>
+          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#">PROYECTOS</a></li>
+          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#">EXPERIENCIA</a></li>
+          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#footer-section">CONTACTO</a></li>
         </ul>
+        <!-- </div> -->
+
+      </nav>
+
+    </header>
+
+    <!-- Skills section -->
+
+    <section class="skills__section">
+      <div class="skills-section-title">
+        <h2>- Tecnologías Manejadas -</h2>
+        <i class="fa-solid fa-code"></i>
       </div>
 
-    </nav>
+      <div class="skills-section-container">
 
-  </header>
+        <div class="skills__section__item">
+          <i class="fa-brands fa-html5"></i>
+          <p>HTML</p>
+        </div>
+        <div class="skills__section__item">
+          <i class="fa-brands fa-css3-alt"></i>
+          <p>CSS</p>
+        </div>
+        <div class="skills__section__item">
+          <i class="fa-brands fa-bootstrap"></i>
+          <p>BOOTSTRAP</p>
+        </div>
+        <div class="skills__section__item">
+          <i class="fa-brands fa-sass"></i>
+          <p>SASS</p>
+        </div>
+        <div class="skills__section__item">
+          <i class="fa-brands fa-git-alt"></i>
+          <p>GIT</p>
+        </div>
+        <div class="skills__section__item">
+          <i class="fa-brands fa-square-github"></i>
+          <p>GITHUB</p>
+        </div>
+        <div class="skills__section__item">
+          <i class="fa-brands fa-js"></i>
+          <p>JAVASCRIPT</p>
+        </div>
+        <div class="skills__section__item">
+          <i class="fa-brands fa-react"></i>
+          <p>REACT JS</p>
+        </div>
+        <div class="skills__section__item">
+          <i class="fa-solid fa-database"></i>
+          <p>POSTGRESQL</p>
+        </div>
+        <div class="skills__section__item">
+          <i class="fa-brands fa-node"></i>
+          <p>NODE JS</p>
+        </div>
+        <div class="skills__section__item">
+          <i class="fa-brands fa-node-js"></i>
+          <p>EXPRESS JS</p>
+        </div>
 
-
-  <!-- About me section -->
-
-  <section class="education-section">
-    <div class="education-section-title">
-      <h2>- EDUCACIÓN -</h2>
-      <i class="fa-sharp fa-solid fa-book"></i>
-    </div>
-    <div>
-      <P>Desafio Latam: FullSatack JavaScript</P>
-      <p>Mar-2022 / Ago-2023</p>
-    </div>
-    <div>
-      <P>CoderHouse: FullSatack JavaScript</P>
-      <p>Ene-2023 / Presente</p>
-    </div>
-  </section>
-
-  <!-- Lenguages section -->
-
-  <section class="lenguages-section">
-    <div class="lenguages-section-title">
-      <h2>- IDIOMAS -</h2>
-      <i class="fa-solid fa-language"></i>
-    </div>
-    <div class="lenguages-section-container">
-      <div>
-        <p>Castellano</p>
-        <p>- Nativo</p>
       </div>
-      <div>
-        <p>Ingles</p>
-        <p>- Basico / Intermedio</p>
-      </div>
-    </div>
-  </section>
+      
+    </section>
 
+    <!-- About me section -->
 
-  <!-- Skills section -->
-
-  <section class="skills-section">
-    <div class="skills-section-title">
-      <h2>- HABILIDADES -</h2>
-      <i class="fa-solid fa-code"></i>
-    </div>
-    <div class="skills-section-container">
-      <div>
-        <i class="fa-brands fa-html5"></i>
-        <p>HTML</p>
-      </div>
-      <div>
-        <i class="fa-brands fa-css3-alt"></i>
-        <p>CSS</p>
-      </div>
-      <div>
-        <i class="fa-brands fa-bootstrap"></i>
-        <p>BOOTSTRAP</p>
-      </div>
-      <div>
-        <i class="fa-brands fa-sass"></i>
-        <p>SASS</p>
-      </div>
-      <div>
-        <i class="fa-brands fa-git-alt"></i>
-        <p>GIT</p>
-      </div>
-      <div>
-        <i class="fa-brands fa-square-github"></i>
-        <p>GITHUB</p>
+    <section class="education-section">
+      <div class="education-section-title">
+        <h2>- EDUCACIÓN -</h2>
+        <i class="fa-sharp fa-solid fa-book"></i>
       </div>
       <div>
-        <i class="fa-brands fa-js"></i>
-        <p>JAVASCRIPT</p>
+        <P>Desafío Latam: FullStack JavaScript</P>
+        <p>Mar-2022 / Ago-2023</p>
       </div>
       <div>
-        <i class="fa-brands fa-react"></i>
-        <p>REACT JS</p>
+        <P>CoderHouse: FullStack JavaScript</P>
+        <p>Ene-2023 / Presente - Hasta Ene - 2024</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects section -->
+    <!-- Projects section -->
 
-  <section class="lenguages-section">
-    <div class="lenguages-section-title">
-      <h2>- PROYECTOS -</h2>
-    </div>
-  </section>
+    <section class="projects__section" id="projects-section">
+      <div class="projects__section__title">
+        <h2>- PROYECTOS -</h2>
 
-  <!-- Experience section -->
-  <section class="experience-section">
-    <div class="experience-section-title">
-      <h2>- Experiencia -</h2>
-      <i class="fa-solid fa-laptop"></i>
-    </div>
-    <div>
-      <p>Not Found 404</p>
-      <i class="fa-solid fa-screwdriver-wrench"></i>
-    </div>
-  </section>
+        <div>
+          <div class="card">
+            
+            <img src="./assets/img/proyecto_1.PNG" alt="">
+            
+            <div class="card__text">
+
+              <div>
+                <h3>Card Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsam quo exercitationem molestias molestiae optio aperiam deserunt impedit, accusantium consequatur reiciendis soluta cupiditate velit at voluptatum! Mollitia eum cum numquam?</p>
+              </div>
+              
+              <div class="card__text--row">
+                <h4>Tecnologías:</h4>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JS</p>
+              </div>
+            
+              <div class="card__text--row">
+                <h4>Caracteristicas</h4>
+                <p>Front End</p>
+                <p>Mobile Fisrt</p>
+                <p>Responsive Design</p>
+              </div>
+            
+              <div class="card__buttons">
+                <a href="">Ver codigo</a>
+                <a href="">Ver Demo</a>
+              </div>
+
+            </div>
+
+          </div>
+          <!-- Rendering from JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Lenguages section -->
+
+    <section class="lenguages-section">
+      <div class="lenguages-section-title">
+        <h2>- IDIOMAS -</h2>
+        <i class="fa-solid fa-language"></i>
+      </div>
+      <div class="lenguages-section-container">
+        <div>
+          <p>Castellano</p>
+          <p>- Nativo</p>
+        </div>
+        <div>
+          <p>Inglés</p>
+          <p>- Básico / Intermedio</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience section -->
+    <section class="experience-section">
+      <div class="experience-section-title">
+        <h2>- Experiencia -</h2>
+        <i class="fa-solid fa-laptop"></i>
+      </div>
+      <div>
+        <p>Not Found 404</p>
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+      </div>
+    </section>
 
 
-  <!-- Footer Section -->
-  <footer class="footer-section">
-    <h2>CONTACTO:</h2>
-    <div>
-      <a href="https://www.instagram.com/joshvalbuenah/" target="_blank"><i
-          class="fa-brands fa-square-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/josuevalbuena/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-    </div>
-  </footer>
+    <!-- Footer Section -->
+    <footer class="footer__section" id="footer-section">
+      <h2>CONTACTO:</h2>
+      <div>
+        <a href="https://www.instagram.com/joshvalbuenah/" target="_blank"><i
+            class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/josuevalbuena/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <div class="footer__section__develop">
+        <h3>Desarrollado por Josué Valbuena</h3>
+      </div>
+    </footer>
+
+  </div>
 
   <script src="https://kit.fontawesome.com/64da6a45ed.js" crossorigin="anonymous"></script>
 </body>

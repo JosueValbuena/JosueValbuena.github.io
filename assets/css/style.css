@@ -4,10 +4,31 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
+    color: var(--color-black);
 }
 
-.hero--section {}
+:root{
+    --color-black: #0e1119;
+    --color-green-dark: #384D48;
+    --color-green-light: #ACAD94;
+    --color-gray-dark: #6E7271;
+    --color-gray-mid: #D8D4D5;
+    --color-gray-light: #E2E2E2;
+}
 
+/* Hero */
+
+/* Tecnologies */
+
+/* Education */
+
+/* Projects */
+
+/* Lenguages */
+
+/* Experience */
+
+/* Footer */
 .hero--section .intro {
     width: 100%;
     height: 30vh;
@@ -29,89 +50,42 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 1rem;
-    background-color: blue;
+    padding: 0 2rem;
+    background-color: var(--color-green-dark);
+    position: relative;
 }
 
-.navbar .checkbox,
-.navbar--icons {
-    position: absolute;
-    width: 2rem;
-    height: 2rem;
-}
-
-.navbar .checkbox {
-    opacity: 0;
-}
-
-.navbar .navbar--icons {
-    pointer-events: none;
-    font-size: 2rem;
-}
-
-.navbar .checkbox:checked~.fa-bars {
-    display: none;
-}
-
-.navbar .fa-xmark {
-    display: none;
-}
-
-.navbar .checkbox:checked~.fa-xmark {
-    display: inline-block;
-
-}
-
-.menu {
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    right: 1000px;
-    top: 305px;
-    transition: 200ms;
-    text-align: center;
-}
-
-.navbar .checkbox:checked~.menu {
-    z-index: 1;
-    right: 0;
-    top: 305px;
-}
-
-.menu li {
-    list-style: none;
-}
-
-.menu li a {
-    text-decoration: none;
-    display: block;
-    background-color: aquamarine;
-}
-
-.menu li a:hover {
-    background-color: blueviolet;
-}
-
-/* .navbar{
-    background-color: black;
-    position: sticky;
-    top: 0;
+.navbar__menu{
     display: flex;
-    justify-content: space-around;
-    padding: 1rem 0;
-    width: 100%;
+    flex-direction: column;
+    list-style-type: none;
 }
 
-.navbar *{
-    color: white;
+.navbar__menu__item{
+    margin: 0 10px;
+    width: max-content;
 }
-.navbar *:hover{
-    color: gray;
-} */
+
+.navbar__menu__link{
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar__menu__link:hover{
+    background-color: var(--color-green-light);
+}
+
+.navbar__toggle{
+    background: none;
+    border: none;
+}
 
 .logo {
     text-align: left;
+}
+
+.education-section{
+    background-color: var(--color-green-light);
 }
 
 .education-section-title {
@@ -125,12 +99,11 @@
 }
 
 .education-section div p:nth-child(2) {
-    color: grey;
+    color: var(--color-gray-dark);
 }
 
-.skills-section {
-    background-color: black;
-    color: white;
+.skills__section {
+    background-color: var(--color-gray-light);
 }
 
 .skills-section-title {
@@ -142,15 +115,58 @@
 .skills-section-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 1rem 3rem;
+    justify-items: center;
+    padding: 1.5rem 0;
 }
 
-.skills-section-container * {
+.skills__section__item {
     display: flex;
-    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.skills__section__item * {
+    padding: 0 0.5rem;
+}
+
+.projects-section{
+    background-color: var(--color-gray-light);
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    background-color: var(--color-gray-dark);
+    width: 20rem;
+    padding-bottom: 0.5rem;
+}
+
+.card > img{
+    width: 19.5rem;
+    margin-top: 0.3rem;
+}
+
+.card__text{
+    text-align: start;
+    
+}
+
+.card__text > *{
+    padding: 0.25rem 0;
+}
+
+.card__text--row > *{
+    margin-right: 0.5rem;
+    display: inline;
+}
+
+.card__buttons{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.5rem;
 }
 
 .lenguages-section {
+    background-color: var(--color-green-light);
     padding: 1rem 0;
 }
 
@@ -170,13 +186,12 @@
 }
 
 .lenguages-section div p:nth-child(2) {
-    color: grey;
+    color: var(--color-gray-dark);
     padding-left: 0.5rem;
 }
 
 .experience-section {
-    background-color: black;
-    color: white;
+    background-color: var(--color-gray-light);
     text-align: center;
     padding: 1rem 0;
 }
@@ -189,8 +204,10 @@
     padding: 0.5rem 0;
 }
 
-.footer-section {}
+.footer__section{
+    background-color: var(--color-green-light);
+}
 
-.footer-section * {
-    color: black;
+.footer__section__develop{
+    background-color: var(--color-green-dark);
 }
