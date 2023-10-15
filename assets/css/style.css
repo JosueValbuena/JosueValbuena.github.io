@@ -7,7 +7,7 @@
     color: var(--color-black);
 }
 
-:root{
+:root {
     --color-black: #0e1119;
     --color-green-dark: #384D48;
     --color-green-light: #ACAD94;
@@ -16,29 +16,45 @@
     --color-gray-light: #E2E2E2;
 }
 
+/* Utils */
+
+.button {
+    background-color: var(--color-green-light);
+    padding: 0.5rem 1rem;
+    border-radius: 7.5px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: var(--color-green-dark);
+    color: var(--color-gray-light);
+}
+
+.container__section {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.container__section:nth-last-child(1) {
+    padding: 0;
+}
+
+.section--light {
+    background-color: var(--color-gray-light);
+}
+
+.section--dark {
+    background-color: var(--color-green-light);
+}
+
 /* Hero */
 
-/* Tecnologies */
-
-/* Education */
-
-/* Projects */
-
-/* Lenguages */
-
-/* Experience */
-
-/* Footer */
 .hero--section .intro {
     width: 100%;
     height: 30vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-
-.hero-text {
-    margin: 15% 0 0 5%;
 }
 
 #profile_img {
@@ -50,57 +66,68 @@
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0 2rem;
     background-color: var(--color-green-dark);
     position: relative;
+    height: 5rem;
 }
 
-.navbar__menu{
+/* Navbar*/
+
+.navbar__menu {
     display: flex;
     flex-direction: column;
+    align-items: center;
     list-style-type: none;
+    background-color: var(--color-black);
+    position: absolute;
+    top: 5rem;
+    left: -100%;
+    width: 100%;
+    padding: 1rem 0;
+    overflow-y: auto;
+    transition: left 0.3s;
 }
 
-.navbar__menu__item{
+.navbar__menu--visible {
+    left: 0;
+}
+
+.navbar__menu__item {
     margin: 0 10px;
     width: max-content;
+    padding: 0.5rem 0;
 }
 
-.navbar__menu__link{
+.navbar__menu__link {
     text-decoration: none;
     transition: 0.3s;
+    color: var(--color-gray-light);
 }
 
-.navbar__menu__link:hover{
+.navbar__menu__link:hover {
     background-color: var(--color-green-light);
+    padding: 0.2rem 0.5rem;
+    color: var(--color-black);
 }
 
-.navbar__toggle{
+.navbar__toggle {
     background: none;
     border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.navbar__toggle > * {
+    color: var(--color-gray-light);
 }
 
 .logo {
     text-align: left;
 }
 
-.education-section{
-    background-color: var(--color-green-light);
-}
-
-.education-section-title {
-    padding: 1rem;
-    text-align: center;
-    text-decoration: underline;
-}
-
-.education-section * {
-    padding: 0.2rem;
-}
-
-.education-section div p:nth-child(2) {
-    color: var(--color-gray-dark);
-}
+/* Tecnologies */
 
 .skills__section {
     background-color: var(--color-gray-light);
@@ -128,42 +155,77 @@
     padding: 0 0.5rem;
 }
 
-.projects-section{
-    background-color: var(--color-gray-light);
+/* Education */
+
+.education-section {
+    background-color: var(--color-green-light);
+}
+
+.education-section-title {
+    padding: 1rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.education-section * {
+    padding: 0.2rem;
+}
+
+.education-section div p:nth-child(2) {
+    color: var(--color-gray-dark);
+}
+
+/* Projects */
+
+.projects__section {
     display: flex;
     justify-content: center;
 }
 
-.card{
-    background-color: var(--color-gray-dark);
+.card {
+    background-color: var(--color-gray-light);
     width: 20rem;
     padding-bottom: 0.5rem;
+    box-shadow: 0 0 10px -3.5px;
+    /* eje-X eje-Y desenfoque expancion*/
+    border-radius: 10px;
+    transition: 0.3s;
+    margin-top: 1rem;
 }
 
-.card > img{
+.card:hover {
+    background-color: var(--color-gray-mid);
+}
+
+.card>img {
     width: 19.5rem;
     margin-top: 0.3rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
-.card__text{
+.card__text {
     text-align: start;
-    
+    padding: 0 0.5rem;
 }
 
-.card__text > *{
+.card__text>* {
     padding: 0.25rem 0;
 }
 
-.card__text--row > *{
+.card__text--row>* {
     margin-right: 0.5rem;
     display: inline;
 }
 
-.card__buttons{
+.card__buttons {
     display: flex;
     justify-content: space-between;
     padding: 0 0.5rem;
 }
+
+
+/* Lenguages */
 
 .lenguages-section {
     background-color: var(--color-green-light);
@@ -190,6 +252,8 @@
     padding-left: 0.5rem;
 }
 
+/* Experience */
+
 .experience-section {
     background-color: var(--color-gray-light);
     text-align: center;
@@ -204,10 +268,17 @@
     padding: 0.5rem 0;
 }
 
-.footer__section{
+/* Footer */
+
+.footer__section {
     background-color: var(--color-green-light);
 }
 
-.footer__section__develop{
+.footer__section__develop {
     background-color: var(--color-green-dark);
+}
+
+.footer__section__develop>h3 {
+    text-align: center;
+    color: var(--color-gray-light);
 }
