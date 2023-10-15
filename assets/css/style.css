@@ -104,6 +104,13 @@
     text-decoration: none;
     transition: 0.3s;
     color: var(--color-gray-light);
+    font-weight: bold;
+}
+
+.navbar__menu__link--active {
+    color: var(--color-green-dark);
+    background-color: var(--color-gray-light);
+    padding: 0.05rem 0.1rem;
 }
 
 .navbar__menu__link:hover {
