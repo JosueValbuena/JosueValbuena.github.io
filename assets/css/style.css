@@ -49,23 +49,23 @@
 
 /* Container */
 
-.container{
+.container {
     display: grid;
-    grid-template-areas: 
-    "hero"
-    "skills"
-    "about"
-    "projects"
-    "lenguages"
-    "experience"
-    "footer"
+    grid-template-areas:
+        "hero"
+        "skills"
+        "about"
+        "projects"
+        "lenguages"
+        "experience"
+        "footer"
     ;
-    grid-template-columns: 12fr;
+    grid-template-columns: 1fr;
 }
 
 /* Hero */
 
-.hero__section{
+.hero__section {
     grid-area: hero;
 }
 
@@ -91,6 +91,7 @@
     background-color: var(--color-green-dark);
     position: relative;
     height: 5rem;
+    box-shadow: 0 3px 7px 0px;
 }
 
 /* Navbar*/
@@ -146,11 +147,12 @@
     cursor: pointer;
 }
 
-.navbar__icons--novisible{
+.navbar__icons--novisible {
     display: none !important;
 }
 
-.navbar__toggle > *, .navbar__logo {
+.navbar__toggle>*,
+.navbar__logo {
     color: var(--color-gray-light);
 }
 
@@ -209,13 +211,13 @@
     text-align: center;
 }
 
-.cards__container{
+.cards__container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 1.5rem 0;
-    
+
 }
 
 .card {
@@ -244,7 +246,7 @@
     transition: 0.3s;
 }
 
-.card > img:hover {
+.card>img:hover {
     scale: 1.1;
 }
 
@@ -272,7 +274,7 @@
 /* Lenguages */
 
 .lenguages__section {
-    grid-area: leng;
+    grid-area: lenguages;
     padding: 1rem 0;
 }
 
@@ -298,7 +300,7 @@
 
 /* Experience */
 
-.experience-section {
+.experience__section {
     grid-area: experience;
     text-align: center;
     padding: 1rem 0;
@@ -328,23 +330,55 @@
     color: var(--color-gray-light);
 }
 
-@media screen and (min-width: 576px){
-    .container{
+@media screen and (min-width: 576px) {
+    .container {
         display: grid;
-        grid-template-areas: 
-        "hero hero"
-        "skills skills"
-        "about about"
-        "projects projects"
-        "leng leng"
-        "footer footer"
+        grid-template-areas:
+            "hero hero"
+            "skills skills"
+            "about lenguages"
+            "projects projects"
+            "experience experience"
+            "footer footer"
         ;
-        grid-template-columns: 6fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skills-section-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .experience__section {
+        background-color: var(--color-green-light);
     }
 }
 
-@media screen and (min-width: 992px){
-    body{
+@media screen and (min-width: 992px) {
+    .container__section {
+        padding: 0 10rem;
+    }
+    
+    .navbar{
+        position: static;
+        display: flex;
+        justify-content: space-around;
+        padding: 0 10rem;
+    }
 
+    .navbar__menu {
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: var(--color-green-dark);
+        position: static;
+    }
+
+    .navbar__menu__link:hover {
+        background-color: var(--color-green-dark);
+        padding: 0;
+        color: var(--color-black);
+    }
+
+    .navbar__toggle{
+        display: none;
     }
 }
