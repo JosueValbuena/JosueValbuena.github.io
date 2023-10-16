@@ -49,17 +49,18 @@
 
       <nav class="navbar">
 
-        <a href="#">JV</a>
+        <h2 class="navbar__logo">JV</h2>
 
         <button class="navbar__toggle" aria-label="Abrir menu">
-          <i class="fa-solid fa-bars navbar--icons"></i>
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-xmark navbar__icons--novisible"></i>
         </button>
 
         <ul class="navbar__menu">
-          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#">HABILIDADES</a></li>
-          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#">EDUCACIÓN</a></li>
-          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#">PROYECTOS</a></li>
-          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#">EXPERIENCIA</a></li>
+          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#skills-section">HABILIDADES</a></li>
+          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#education-section">EDUCACIÓN</a></li>
+          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#projects-section">PROYECTOS</a></li>
+          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#experience-section">EXPERIENCIA</a></li>
           <li class="navbar__menu__item"><a class="navbar__menu__link" href="#footer-section">CONTACTO</a></li>
         </ul>
 
@@ -69,7 +70,7 @@
 
     <!-- Skills section -->
 
-    <section class="container__section section--light">
+    <section class="container__section section--light" id="skills-section">
       <div class="skills-section-title">
         <h2>- Tecnologías Manejadas -</h2>
         <i class="fa-solid fa-code"></i>
@@ -123,12 +124,12 @@
         </div>
 
       </div>
-      
+
     </section>
 
     <!-- About me section -->
 
-    <section class="container__section section--dark">
+    <section class="container__section section--dark" id="education-section">
       <div class="education-section-title">
         <h2>- EDUCACIÓN -</h2>
         <i class="fa-sharp fa-solid fa-book"></i>
@@ -149,90 +150,164 @@
       <div class="projects__section__title">
         <h2>- PROYECTOS -</h2>
 
-        <div>
+        <div class="cards__container">
+
           <div class="card">
-            
+
             <img src="./assets/img/proyecto_1.PNG" alt="">
-            
+
             <div class="card__text">
 
               <div>
                 <h3>Card Title</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsam quo exercitationem molestias molestiae optio aperiam deserunt impedit, accusantium consequatur reiciendis soluta cupiditate velit at voluptatum! Mollitia eum cum numquam?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsam quo exercitationem molestias
+                  molestiae optio aperiam deserunt impedit, accusantium consequatur reiciendis soluta cupiditate velit
+                  at voluptatum! Mollitia eum cum numquam?</p>
               </div>
-              
+
               <div class="card__text--row">
                 <h4>Tecnologías:</h4>
                 <p>HTML</p>
                 <p>CSS</p>
                 <p>JS</p>
               </div>
-            
+
               <div class="card__text--row">
                 <h4>Caracteristicas</h4>
                 <p>Front End</p>
                 <p>Mobile Fisrt</p>
                 <p>Responsive Design</p>
               </div>
-            
+
               <div class="card__buttons">
-                <a href="#" target="_blank" class="button">Ver codigo</a>
-                <a href="#" target="_blank" class="button">Ver Demo</a>
+                <a href="https://github.com/JosueValbuena/CoderHouseDesarroWeb" target="_blank" class="button">Ver codigo</a>
+                <a href="https://allstorefake.netlify.app/" target="_blank" class="button">Ver Demo</a>
               </div>
 
             </div>
-
           </div>
-          <!-- Rendering from JavaScript -->
+
+          <div class="card">
+
+            <img src="./assets/img/proyecto_2.png" alt="">
+
+            <div class="card__text">
+
+              <div>
+                <h3>Card Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsam quo exercitationem molestias
+                  molestiae optio aperiam deserunt impedit, accusantium consequatur reiciendis soluta cupiditate velit
+                  at voluptatum! Mollitia eum cum numquam?</p>
+              </div>
+
+              <div class="card__text--row">
+                <h4>Tecnologías:</h4>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JS</p>
+              </div>
+
+              <div class="card__text--row">
+                <h4>Caracteristicas</h4>
+                <p>Front End</p>
+                <p>Mobile Fisrt</p>
+                <p>Responsive Design</p>
+              </div>
+
+              <div class="card__buttons">
+                <a href="https://github.com/JosueValbuena/CoderHouseJavaScript" target="_blank" class="button">Ver codigo</a>
+                <a href="https://shoppingcard-coderhouse-js-jv.netlify.app/" target="_blank" class="button">Ver Demo</a>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="card">
+
+            <img src="./assets/img/proyecto_3.png" alt="">
+
+            <div class="card__text">
+
+              <div>
+                <h3>Card Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsam quo exercitationem molestias
+                  molestiae optio aperiam deserunt impedit, accusantium consequatur reiciendis soluta cupiditate velit
+                  at voluptatum! Mollitia eum cum numquam?</p>
+              </div>
+
+              <div class="card__text--row">
+                <h4>Tecnologías:</h4>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JS</p>
+              </div>
+
+              <div class="card__text--row">
+                <h4>Caracteristicas</h4>
+                <p>Front End</p>
+                <p>Mobile Fisrt</p>
+                <p>Responsive Design</p>
+              </div>
+
+              <div class="card__buttons">
+                <a href="https://github.com/JosueValbuena/CoderHouseReact" target="_blank" class="button">Ver codigo</a>
+                <a href="https://shoppingcart-coderhouse-react-jv.netlify.app/" target="_blank" class="button">Ver Demo</a>
+              </div>
+
+            </div>
+          </div>
+
         </div>
-
+        <!-- Rendering from JavaScript sonn-->
       </div>
-    </section>
 
-    <!-- Lenguages section -->
+  </div>
+  </section>
 
-    <section class="container__section section--dark">
-      <div class="lenguages-section-title">
-        <h2>- IDIOMAS -</h2>
-        <i class="fa-solid fa-language"></i>
-      </div>
-      <div class="lenguages-section-container">
-        <div>
-          <p>Castellano</p>
-          <p>- Nativo</p>
-        </div>
-        <div>
-          <p>Inglés</p>
-          <p>- Básico / Intermedio</p>
-        </div>
-      </div>
-    </section>
+  <!-- Lenguages section -->
 
-    <!-- Experience section -->
-    <section class="container__section section--light">
-      <div class="experience-section-title">
-        <h2>- Experiencia -</h2>
-        <i class="fa-solid fa-laptop"></i>
+  <section class="container__section section--dark" id="lenguages-section">
+    <div class="lenguages-section-title">
+      <h2>- IDIOMAS -</h2>
+      <i class="fa-solid fa-language"></i>
+    </div>
+    <div class="lenguages-section-container">
+      <div>
+        <p>Castellano</p>
+        <p>- Nativo</p>
       </div>
       <div>
-        <p>Not Found 404</p>
-        <i class="fa-solid fa-screwdriver-wrench"></i>
+        <p>Inglés</p>
+        <p>- Básico</p>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <!-- Experience section -->
+  <section class="container__section section--light" id="experience-section">
+    <div class="experience-section-title">
+      <h2>- Experiencia -</h2>
+      <i class="fa-solid fa-laptop"></i>
+    </div>
+    <div>
+      <p>Not Found 404</p>
+      <i class="fa-solid fa-screwdriver-wrench"></i>
+    </div>
+  </section>
 
 
-    <!-- Footer Section -->
-    <footer class="container__section section--dark" id="footer-section">
-      <h2>CONTACTO:</h2>
-      <div>
-        <a href="https://www.instagram.com/joshvalbuenah/" target="_blank"><i
-            class="fa-brands fa-square-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/josuevalbuena/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-      </div>
-      <div class="footer__section__develop">
-        <h3>Desarrollado por Josué Valbuena Huerta</h3>
-      </div>
-    </footer>
+  <!-- Footer Section -->
+  <footer class="container__section footer__section section--dark" id="footer-section">
+    <h2>CONTACTO:</h2>
+    <div>
+      <a href="https://www.instagram.com/joshvalbuenah/" target="_blank"><i
+          class="fa-brands fa-square-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/josuevalbuena/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    <div class="footer__section__develop">
+      <h3>Desarrollado por Josué Valbuena Huerta</h3>
+    </div>
+  </footer>
 
   </div>
 
