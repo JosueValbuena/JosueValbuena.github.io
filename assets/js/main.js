@@ -26,7 +26,9 @@ navLinks.forEach((link) => {
         link.classList.add('navbar__menu__link--active');
 
         navMenu.classList.remove('navbar__menu--visible');
-        navToggleBtn.setAttribute('aria-label', 'Abrir menu')
+        navToggleBtn.setAttribute('aria-label', 'Abrir menu');
+        navToggleBtnIconOpen.classList.toggle('navbar__icons--novisible');
+        navToggleBtnIconClose.classList.toggle('navbar__icons--novisible');
     });
 });
 
