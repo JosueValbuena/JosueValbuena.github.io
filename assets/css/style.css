@@ -31,6 +31,10 @@
 }
 
 .container__section {
+    padding: 1rem 1rem;
+}
+
+.container__section__title {
     text-align: center;
     padding: 1rem 0;
 }
@@ -67,6 +71,8 @@
 
 .hero__section {
     grid-area: hero;
+    background: rgb(56, 77, 72);
+    background: linear-gradient(193deg, rgba(56, 77, 72, 1) 0%, rgba(172, 173, 148, 1) 86%);
 }
 
 .hero__section .intro {
@@ -77,10 +83,15 @@
     align-items: center;
 }
 
+.intro * {
+    color: var(--color-black);
+}
+
 #profile_img {
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
+    box-shadow: 0 0 10px 0px;
 }
 
 .navbar {
@@ -355,10 +366,10 @@
 
 @media screen and (min-width: 992px) {
     .container__section {
-        padding: 0 10rem;
+        padding: 1rem 10rem;
     }
-    
-    .navbar{
+
+    .navbar {
         position: static;
         display: flex;
         justify-content: space-around;
@@ -378,7 +389,11 @@
         color: var(--color-black);
     }
 
-    .navbar__toggle{
+    .navbar__toggle {
         display: none;
+    }
+
+    .skills-section-container {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
