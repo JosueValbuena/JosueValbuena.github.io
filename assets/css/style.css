@@ -51,6 +51,15 @@
     background-color: var(--color-green-light);
 }
 
+.container__section__text--secondary {
+    color: var(--color-green-dark);
+}
+
+.container__section__link:hover .icono i,
+.container__section__link:hover .texto {
+    color: var(--color-gray-light);
+}
+
 /* Container */
 
 .container {
@@ -92,6 +101,12 @@
     height: 10rem;
     border-radius: 50%;
     box-shadow: 0 0 10px 0px;
+    border: solid 3px var(--color-gray-light);
+    transition: 0.3s;
+}
+
+#profile_img:hover {
+    border: solid 3px var(--color-gray-dark);
 }
 
 .navbar {
@@ -199,8 +214,8 @@
     padding: 0.2rem;
 }
 
-.education-section div p:nth-child(2) {
-    color: var(--color-gray-dark);
+.education-section-div{
+    margin-bottom: 0.5rem;
 }
 
 /* Projects */
