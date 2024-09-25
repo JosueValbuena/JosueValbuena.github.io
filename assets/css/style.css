@@ -206,10 +206,9 @@
 .personal__section {
     grid-area: personal;
     padding: 1.5rem;
-    display: flex;
 }
 
-.personal__section>div {
+.personal__section> .center_content {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -362,7 +361,7 @@
     margin: 1.25rem 0.5rem 0 0.5rem;
 }
 
-.card__text--description{
+.card__text--description {
     height: 8rem;
 }
 
@@ -409,6 +408,36 @@
 
 .experience-section div {
     padding: 0.5rem 0;
+}
+
+.experience__section__card {
+    padding: 1.5rem;
+    width: 20rem;
+    border-radius: .45rem;
+    /* border: .5rem solid var(--color-gray-mid); */
+    margin: 0 auto;
+    background-color: var(--color-gray-light);
+}
+
+.experience__section__card__head {
+    display: flex;
+    align-items: center;
+}
+
+.experience__section__card__head__img {
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    width: 3rem;
+}
+
+.experience__section__card__head__text {
+    margin-left: 1rem;
+    text-align: start;
+}
+
+.experience__section__card__body {
+    text-align: start;
+    margin: 1rem 0 0 0;
 }
 
 /* Footer */
