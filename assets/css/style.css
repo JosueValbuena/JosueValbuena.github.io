@@ -47,9 +47,7 @@
 
 .section__title--box {
     border-radius: .45rem;
-    /*     border-top: .5rem solid var(--color-gray-mid);
-    border-left: .5rem solid var(--color-gray-mid);
-    border-right: .5rem solid var(--color-gray-mid); */
+    width: 10rem;
     margin: 0 auto;
     padding: 1.5rem;
     position: absolute;
@@ -211,8 +209,10 @@
     display: flex;
 }
 
-.personal__section > div {
+.personal__section>div {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* About */
@@ -359,11 +359,32 @@
 
 .card__text {
     text-align: start;
-    padding: 0 0.5rem;
+    margin: 1.25rem 0.5rem 0 0.5rem;
+}
+
+.card__text--description{
+    height: 8rem;
+}
+
+.card__text--title {
+    font-size: 1.25rem;
+}
+
+.card__text--subtitle {
+    font-size: .875rem;
+}
+
+.card__text--normal {
+    font-size: .75rem;
+    margin-top: 1rem;
 }
 
 .card__text>* {
     padding: 0.25rem 0;
+}
+
+.card__text--row {
+    height: 2.5rem;
 }
 
 .card__text--row>* {
@@ -374,6 +395,7 @@
 .card__buttons {
     display: flex;
     justify-content: space-between;
+    margin: 1.5rem 0 0 0;
     padding: 0 0.5rem;
 }
 
@@ -393,12 +415,13 @@
 
 .footer__section {
     grid-area: footer;
-}
-
-.footer__section__develop {
     background-color: var(--color-green-dark);
     padding: 1.5rem 0;
 }
+
+/* .footer__section__develop {
+    
+} */
 
 .footer__section__develop>h3 {
     text-align: center;
