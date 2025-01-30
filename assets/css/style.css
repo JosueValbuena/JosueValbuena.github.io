@@ -9,7 +9,9 @@
 
 :root {
     --color-black: #0e1119;
+    --color-black-transparent: #0e111980;
     --color-green-dark: #384D48;
+    --color-green-dark-transpanret: #384d4880;
     --color-green-light: #ACAD94;
     --color-gray-dark: #6E7271;
     --color-gray-mid: #D8D4D5;
@@ -127,6 +129,8 @@
     border: solid 3px var(--color-gray-dark);
 }
 
+/* Navbar*/
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -135,11 +139,19 @@
     background-color: var(--color-green-dark);
     position: relative;
     height: 5rem;
+    width: 100%;
     box-shadow: 0 3px 7px 0px;
     z-index: 3;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Navbar*/
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-green-dark-transpanret);
+}
 
 .navbar__menu {
     display: flex;
@@ -153,7 +165,11 @@
     width: 100%;
     padding: 1rem 0;
     overflow-y: auto;
-    transition: left 0.3s;
+    transition: all .2s ease-in-out;
+}
+
+.navbar__menu.fixed {
+    background-color: var(--color-black-transparent);
 }
 
 .navbar__menu--visible {
@@ -208,7 +224,7 @@
     padding: 1.5rem;
 }
 
-.personal__section> .center_content {
+.personal__section>.center_content {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -493,6 +509,11 @@
         justify-content: flex-end;
         background-color: var(--color-green-dark);
         position: static;
+    }
+
+    .navbar__menu.fixed {
+        background-color: rgba(56, 77, 72, 0.0);
+        /* background-color: var(--color-green-dark-transpanret); */
     }
 
     .navbar__menu__link:hover {
