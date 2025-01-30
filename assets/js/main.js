@@ -3,6 +3,22 @@ const navMenu = document.querySelector('.navbar__menu');
 const navLinks = document.querySelectorAll('.navbar__menu__link');
 const navToggleBtnIconOpen = document.querySelector('.fa-bars');
 const navToggleBtnIconClose = document.querySelector('.fa-xmark');
+const navBar = document.querySelector('.navbar');
+const navBarMenu = document.querySelector('.navbar__menu');
+
+console.log({ navBar, window })
+
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > 250) {
+        navBar.classList.add('fixed');
+        navBarMenu.classList.add('fixed');
+    } else {
+        navBar.classList.remove('fixed');
+        navBarMenu.classList.remove('fixed');
+    };
+});
 
 navToggleBtn.addEventListener('click', () => {
 
