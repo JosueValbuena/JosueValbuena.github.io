@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/img/favico.ico" type="image/x-icon">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/texts/stylesTexts.css">
 </head>
 
 <body>
@@ -20,20 +21,20 @@
 
     <!-- Hero section -->
 
-    <header class="hero__section ">
+    <header class="hero__section" id="hero__section">
 
       <div class="intro center_content">
 
         <div>
-          <h2>!Hola¡</h2>
-          <p>Soy Josué Valbuena Huerta</p>
-          <p>Desarrollador Web</p>
+          <h1 class="text__title--grayLight">!Hola¡</h1>
+          <p class="text__title--grayLight">Soy Josué <span class="text__title--grayMid">Valbuena Huerta</span></p>
+          <p class="text__title--grayLight">Desarrollador Web</p>
           <h4>Contáctame en:</h4>
           <div>
-            <a href="https://www.instagram.com/joshvalbuenah/" target="_blank">
+            <a href="https://www.instagram.com/joshvalbuenah/" target="_blank" aria-label="Ir a perfil de instagram">
               <i class="fa-brands fa-square-instagram"></i>
             </a>
-            <a href="https://www.linkedin.com/in/josuevalbuena/" target="_blank">
+            <a href="https://www.linkedin.com/in/josuevalbuena/" target="_blank" aria-label="Ir a perfil de linkedin">
               <i class="fa-brands fa-linkedin"></i>
             </a>
           </div>
@@ -57,11 +58,16 @@
         </button>
 
         <ul class="navbar__menu">
-          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#skills-section">HABILIDADES</a></li>
-          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#about-section">EDUCACIÓN</a></li>
-          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#projects-section">PROYECTOS</a></li>
-          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#experience-section">EXPERIENCIA</a></li>
-          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#footer-section">CONTACTO</a></li>
+          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#skills-section"
+              aria-label="Ir a seccion habilidades">HABILIDADES</a></li>
+          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#about-section"
+              aria-label="Ir a seccion educacion">EDUCACIÓN</a></li>
+          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#projects-section"
+              aria-label="Ir a seccion de proyectos">PROYECTOS</a></li>
+          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#experience-section"
+              aria-label="Ir a seccion de experiencia">EXPERIENCIA</a></li>
+          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#footer-section"
+              aria-label="Ir a seccion de contacto">CONTACTO</a></li>
         </ul>
 
       </nav>
@@ -75,12 +81,12 @@
 
     <!-- About me section -->
 
-    <main class="section--dark">
+    <main class="main__section section--dark">
 
       <section class="personal__section">
 
         <div class="container__section__title">
-          <h2>- Informacion Personal -</h2>
+          <h2 class="text__subtitle--greenDark">Informacion Personal</h2>
           <i class="fa-solid fa-user"></i>
         </div>
 
@@ -91,7 +97,7 @@
           <section class="skills__section container__section" id="skills-section">
             <div class="center_content">
               <div class="container__section__title section__title--box">
-                <h2>Tecnologías Manejadas</h2>
+                <h3>Tecnologías Manejadas</h3>
                 <i class="fa-solid fa-code"></i>
               </div>
 
@@ -152,7 +158,7 @@
           <section class="education__section container__section" id="education-section">
 
             <div class="container__section__title section__title--box">
-              <h2>EDUCACIÓN</h2>
+              <h3>EDUCACIÓN</h3>
               <i class="fa-sharp fa-solid fa-book"></i>
             </div>
 
@@ -163,7 +169,7 @@
                 <p class="container__section__text--secondary">Mar-2022 / Ago-2023</p>
                 <a class="container__section__link"
                   href="https://desafiosdev.s3.amazonaws.com/uploads/certification/image/25401/aprobacion-final-proyecto-final-g28-9085.png"
-                  target="_blank">
+                  target="_blank" aria-label="Ir a certificado de finalizacion bootcamp desafiolatam">
                   <span class="texto">Ver certificado</span>
                   <span class="icono"><i class="fa-solid fa-right-to-bracket"></i></span>
                 </a>
@@ -173,7 +179,8 @@
                 <P>CoderHouse: FullStack JavaScript</P>
                 <p class="container__section__text--secondary">Ene-2023 / Ene-2024</p>
                 <a class="container__section__link"
-                  href="https://www.coderhouse.com/cl/certificados/65d03d01bcded101772bee85?lang=es" target="_blank">
+                  href="https://www.coderhouse.com/cl/certificados/65d03d01bcded101772bee85?lang=es" target="_blank"
+                  aria-label="Ir a certificado de finalizacion de bootcam Corderhouse">
                   <span class="texto">Ver certificado</span>
                   <span class="icono"><i class="fa-solid fa-right-to-bracket"></i></span>
                 </a>
@@ -188,7 +195,7 @@
           <section class="lenguages__section container__section" id="lenguage-section">
 
             <div class="container__section__title section__title--box">
-              <h2>IDIOMAS</h2>
+              <h3>IDIOMAS</h3>
               <i class="fa-solid fa-language"></i>
             </div>
 
@@ -215,7 +222,62 @@
         <div class="center_content">
 
           <div class="container__section__title">
-            <h2>- PROYECTOS -</h2>
+            <h2 class="text__subtitle--greenDark">Proyectos para clientes reales</h2>
+            <i class="fa-solid fa-gear"></i>
+          </div>
+
+          <div class="cards__container">
+
+            <div class="card">
+
+              <img src="./assets/img/proyecto-real-1.png" alt="">
+
+              <div class="card__text">
+
+                <div class="card__text--description">
+                  <h3 class="card__text--title">Landing Page MAXagua</h3>
+                  <p class="card__text--normal">
+                    Proyecto para la empresa MAXagua. Consiste en una landing page para mostrar quien es la empresa, que
+                    hace, que ofrece y como lo hace. Se implemento con HTML, CSS, y conceptos como
+                    Responsive Design.
+                  </p>
+                </div>
+
+                <div class="card__text--row">
+                  <h4 class="card__text--subtitle">Tecnologías:</h4>
+                  <p class="card__text--normal">HTML</p>
+                  <p class="card__text--normal">CSS</p>
+                </div>
+
+                <div class="card__text--row">
+                  <h4 class="card__text--subtitle">Caracteristicas</h4>
+                  <p class="card__text--normal">Front End</p>
+                  <p class="card__text--normal">Mobile Fisrt</p>
+                  <p class="card__text--normal">Responsive Design</p>
+                </div>
+
+                <div class="card__buttons">
+                  <a href="https://maxagua-demo.netlify.app/" target="_blank" class="button"
+                    aria-label="Ir a demo maxagua">Ver Demo</a>
+                </div>
+
+              </div>
+            </div>
+
+
+
+          </div>
+
+        </div>
+        <!-- Rendering from JavaScript soon-->
+      </section>
+
+      <section class="projects__section container__section" id="projects-section">
+
+        <div class="center_content">
+
+          <div class="container__section__title">
+            <h2 class="text__subtitle--greenDark">Proyectos personales</h2>
             <i class="fa-solid fa-gear"></i>
           </div>
 
@@ -252,9 +314,11 @@
                 </div>
 
                 <div class="card__buttons">
-                  <a href="https://github.com/JosueValbuena/CoderHouseDesarroWeb" target="_blank" class="button">Ver
+                  <a href="https://github.com/JosueValbuena/CoderHouseDesarroWeb" target="_blank" class="button"
+                    aria-label="Ir a respositorio del proyecto 1">Ver
                     codigo</a>
-                  <a href="https://allstorefake.netlify.app/" target="_blank" class="button">Ver Demo</a>
+                  <a href="https://allstorefake.netlify.app/" target="_blank" class="button"
+                    aria-label="Ir a la demo del proyecto 1">Ver Demo</a>
                 </div>
 
               </div>
@@ -290,9 +354,11 @@
                 </div>
 
                 <div class="card__buttons">
-                  <a href="https://github.com/JosueValbuena/CoderHouseJavaScript" target="_blank" class="button">Ver
+                  <a href="https://github.com/JosueValbuena/CoderHouseJavaScript" target="_blank" class="button"
+                    aria-label="Ir a respositorio del proyecto-1">Ver
                     codigo</a>
-                  <a href="https://shoppingcard-coderhouse-js-jv.netlify.app/" target="_blank" class="button">Ver
+                  <a href="https://shoppingcard-coderhouse-js-jv.netlify.app/" target="_blank" class="button"
+                    aria-label="Ir a demo del proyecto-2">Ver
                     Demo</a>
                 </div>
 
@@ -327,9 +393,11 @@
                 </div>
 
                 <div class="card__buttons">
-                  <a href="https://github.com/JosueValbuena/CoderHouseReact" target="_blank" class="button">Ver
+                  <a href="https://github.com/JosueValbuena/CoderHouseReact" target="_blank" class="button"
+                    aria-label="Ir al repositorio del proyecto-3">Ver
                     codigo</a>
-                  <a href="https://shoppingcart-coderhouse-react-jv.netlify.app/" target="_blank" class="button">Ver
+                  <a href="https://shoppingcart-coderhouse-react-jv.netlify.app/" target="_blank" class="button"
+                    aria-label="Ir a la demo del proyecto-3">Ver
                     Demo</a>
                 </div>
 
@@ -462,6 +530,47 @@
               </div>
             </div>
 
+            <div class="card">
+
+              <img src="./assets/img/proyecto_6.png" alt="imagen proyecto be flat mates">
+
+              <div class="card__text">
+
+                <div class="card__text--description">
+                  <h3 class="card__text--title">Proyecto Be Flat Mates (En proceso)</h3>
+                  <p class="card__text--normal">
+                    Proyecto fullstack que consiste en ser una herramienta facil de usar para encontrar roomies en
+                    santiago.
+                    Se emplea responsive design, mobile first y estara hecho con react, typescript, express y mongoDB.
+                  </p>
+                </div>
+
+                <div class="card__text--row">
+                  <h4 class="card__text--subtitle">Tecnologías:</h4>
+                  <p class="card__text--normal">Material UI</p>
+                  <p class="card__text--normal">REACT JS</p>
+                  <p class="card__text--normal">NODE JS</p>
+                  <p class="card__text--normal">EXPRESS JS</p>
+                  <p class="card__text--normal">Mongo DB</p>
+                </div>
+
+                <div class="card__text--row">
+                  <h4 class="card__text--subtitle">Caracteristicas</h4>
+                  <p class="card__text--normal">Front End</p>
+                  <p class="card__text--normal">Back End</p>
+                  <p class="card__text--normal">Full Stack</p>
+                </div>
+
+                <div class="card__buttons">
+                  <a href="https://beflatmates.netlify.app/" target="_blank" class="button"
+                    aria-label="Ir a la demo del proyecto be flat mates">Ver
+                    Ver Demo
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
           </div>
 
         </div>
@@ -472,7 +581,7 @@
 
       <section class="experience__section container__section" id="experience-section">
         <div class="container__section__title">
-          <h2>- Experiencia -</h2>
+          <h2 class="text__subtitle--greenDark">Experiencia</h2>
           <i class="fa-solid fa-laptop"></i>
         </div>
 
@@ -536,6 +645,10 @@
     </footer>
 
   </div>
+  
+    <a href="#hero__section" class="toTopButton" aria-label="Ir al inicio de la pagina">
+      <i class="fa-solid fa-arrow-up toTopButton__icon"></i>
+    </a>
 
   <script src="https://kit.fontawesome.com/64da6a45ed.js" crossorigin="anonymous"></script>
   <script src="./assets/js/main.js"></script>

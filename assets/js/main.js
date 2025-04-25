@@ -6,8 +6,6 @@ const navToggleBtnIconClose = document.querySelector('.fa-xmark');
 const navBar = document.querySelector('.navbar');
 const navBarMenu = document.querySelector('.navbar__menu');
 
-console.log({ navBar, window })
-
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
 
@@ -20,11 +18,27 @@ window.addEventListener('scroll', () => {
     };
 });
 
+window.addEventListener('click', (event) => {
+    if (!navMenu.contains(event.target) && !navToggleBtn.contains(event.target)) {
+        navMenu.classList.remove('navbar__menu--visible');
+    }
+    
+    if (navMenu.classList.contains('navbar__menu--visible')) {
+        navToggleBtnIconOpen.classList.add('navbar__icons--novisible');
+        navToggleBtnIconClose.classList.remove('navbar__icons--novisible');
+    }
+
+    if (!navMenu.classList.contains('navbar__menu--visible')) {
+        navToggleBtnIconOpen.classList.remove('navbar__icons--novisible');
+        navToggleBtnIconClose.classList.add('navbar__icons--novisible');
+    }
+});
+
 navToggleBtn.addEventListener('click', () => {
 
-    navMenu.classList.toggle('navbar__menu--visible')
-    navToggleBtnIconOpen.classList.toggle('navbar__icons--novisible')
-    navToggleBtnIconClose.classList.toggle('navbar__icons--novisible')
+    navMenu.classList.toggle('navbar__menu--visible');
+    navToggleBtnIconOpen.classList.toggle('navbar__icons--novisible');
+    navToggleBtnIconClose.classList.toggle('navbar__icons--novisible');
 
     if (navMenu.classList.contains('navbar__menu--visible')) {
         navToggleBtn.setAttribute('aria-label', 'Cerrar menu');
@@ -47,11 +61,3 @@ navLinks.forEach((link) => {
         navToggleBtnIconClose.classList.toggle('navbar__icons--novisible');
     });
 });
-
-/* document.addEventListener('click', (event) => {
-    if (!navMenu.contains(event.target) && event.target !== navToggleBtn) {
-        navMenu.classList.remove('navbar__menu--visible');
-        navToggleBtn.setAttribute('aria-label', 'Abrir menu')
-    }
-    console.log('hola')
-}); */
