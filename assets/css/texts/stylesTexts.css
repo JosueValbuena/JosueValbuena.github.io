@@ -1,0 +1,27 @@
+.text__title--grayMid{
+    font-size: 1.5rem;
+    color: var(--color-gray-mid);
+    font-weight: bold;
+}
+
+.text__title--grayLight{
+    font-size: 1.5rem;
+    color: var(--color-gray-light);
+    font-weight: bold;
+}
+
+.text__subtitle--greenDark{
+    font-size: 1.75rem;
+    color: var(--color-green-dark);
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .text__title--grayMid{
+        font-size: 2rem;
+    }
+    
+    .text__title--grayLight{
+        font-size: 2rem;
+    }   
+}
