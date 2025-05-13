@@ -1,657 +1,466 @@
-<!doctype html>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <title>Josué Valbuena Web</title>
-
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="assets/img/favico.ico" type="image/x-icon">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="stylesheet" href="/assets/css/texts/stylesTexts.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josué Valbuena Huerta | Web Developer</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">JRVH</a>
 
-  <div class="container">
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <button class="nav-link" data-section="about" data-i18n="nav.about">Sobre mí</button>
+                    <button class="nav-link" data-section="skills" data-i18n="nav.skills">Habilidades</button>
+                    <button class="nav-link" data-section="education" data-i18n="nav.education">Educación</button>
+                    <button class="nav-link" data-section="projects" data-i18n="nav.projects">Proyectos</button>
+                    <button class="nav-link" data-section="contact" data-i18n="nav.contact">Contacto</button>
+                </nav>
 
-    <!-- Hero section -->
+                <div class="header-actions">
+                    <!-- Language Toggle -->
+                    <button class="lang-toggle" aria-label="Toggle language">
+                        <span>EN</span>
+                    </button>
 
-    <header class="hero__section" id="hero__section">
+                    <!-- Theme Toggle -->
+                    <button class="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
 
-      <div class="intro center_content">
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+                        <i class="fas fa-bars"></i>
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
 
-        <div>
-          <h1 class="text__title--grayLight">!Hola¡</h1>
-          <p class="text__title--grayLight">Soy Josué <span class="text__title--grayMid">Valbuena Huerta</span></p>
-          <p class="text__title--grayLight">Desarrollador Web</p>
-          <h4>Contáctame en:</h4>
-          <div>
-            <a href="https://www.instagram.com/joshvalbuenah/" target="_blank" aria-label="Ir a perfil de instagram">
-              <i class="fa-brands fa-square-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/josuevalbuena/" target="_blank" aria-label="Ir a perfil de linkedin">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-          </div>
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav">
+                <button class="nav-link" data-section="about" data-i18n="nav.about">Sobre mí</button>
+                <button class="nav-link" data-section="skills" data-i18n="nav.skills">Habilidades</button>
+                <button class="nav-link" data-section="education" data-i18n="nav.education">Educación</button>
+                <button class="nav-link" data-section="projects" data-i18n="nav.projects">Proyectos</button>
+                <button class="nav-link" data-section="contact" data-i18n="nav.contact">Contacto</button>
+            </nav>
         </div>
-
-        <div>
-          <img src="/assets/img/profileimg.jpeg" class="" alt="html icono" id="profile_img">
-        </div>
-
-      </div>
-
-      <!-- Navbar -->
-
-      <nav class="navbar">
-
-        <h2 class="navbar__logo">JRVH</h2>
-
-        <button class="navbar__toggle" aria-label="Abrir menu">
-          <i class="fa-solid fa-bars"></i>
-          <i class="fa-solid fa-xmark navbar__icons--novisible"></i>
-        </button>
-
-        <ul class="navbar__menu">
-          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#skills-section"
-              aria-label="Ir a seccion habilidades">HABILIDADES</a></li>
-          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#about-section"
-              aria-label="Ir a seccion educacion">EDUCACIÓN</a></li>
-          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#projects-section"
-              aria-label="Ir a seccion de proyectos">PROYECTOS</a></li>
-          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#experience-section"
-              aria-label="Ir a seccion de experiencia">EXPERIENCIA</a></li>
-          <li class="navbar__menu__item"><a class="navbar__menu__link" href="#footer-section"
-              aria-label="Ir a seccion de contacto">CONTACTO</a></li>
-        </ul>
-
-      </nav>
-
     </header>
-    <!-- 
-      <div class="center_content">
 
-      </div>
-    -->
+    <main>
+        <!-- Hero Section -->
+        <section id="about" class="section hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            <span data-i18n="hero.greeting">¡Hola!</span>
+                            <span class="hero-name">
+                                <span data-i18n="hero.iam">Soy</span> <span class="accent">Josué Valbuena Huerta</span>
+                            </span>
+                        </h1>
+                        <h2 class="hero-subtitle" data-i18n="hero.profession">Desarrollador Web</h2>
+                        <p class="hero-description" data-i18n="hero.description">
+                            Apasionado por crear experiencias web modernas y funcionales. Especializado en desarrollo
+                            full-stack con JavaScript y sus frameworks.
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary" data-section="contact"
+                                data-i18n="hero.contact">Contáctame</button>
+                            <button class="btn btn-outline" data-section="projects" data-i18n="hero.projects">Ver
+                                Proyectos</button>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/JosueValbuena" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/josuevalbuena/" target="_blank"
+                                rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:josuevalbuenadev@gmail.com" aria-label="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="profile-image-container">
+                            <div class="profile-image-glow"></div>
+                            <div class="profile-image-border"></div>
+                            <img src="./assets/img/profileimg.jpeg" alt="Josué Valbuena Huerta" class="profile-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- About me section -->
-
-    <main class="main__section section--dark">
-
-      <section class="personal__section">
-
-        <div class="container__section__title">
-          <h2 class="text__subtitle--greenDark">Informacion Personal</h2>
-          <i class="fa-solid fa-user"></i>
-        </div>
-
-        <div class="center_content">
-
-          <!-- Skills section -->
-
-          <section class="skills__section container__section" id="skills-section">
-            <div class="center_content">
-              <div class="container__section__title section__title--box">
-                <h3>Tecnologías Manejadas</h3>
-                <i class="fa-solid fa-code"></i>
-              </div>
-
-              <div class="skills-section-container">
-
-                <div class="skills__section__item">
-                  <i class="fa-brands fa-html5"></i>
-                  <p>HTML</p>
-                </div>
-                <div class="skills__section__item">
-                  <i class="fa-brands fa-css3-alt"></i>
-                  <p>CSS</p>
-                </div>
-                <div class="skills__section__item">
-                  <i class="fa-brands fa-bootstrap"></i>
-                  <p>BOOTSTRAP</p>
-                </div>
-                <div class="skills__section__item">
-                  <i class="fa-brands fa-sass"></i>
-                  <p>SASS</p>
-                </div>
-                <div class="skills__section__item">
-                  <i class="fa-brands fa-git-alt"></i>
-                  <p>GIT</p>
-                </div>
-                <div class="skills__section__item">
-                  <i class="fa-brands fa-square-github"></i>
-                  <p>GITHUB</p>
-                </div>
-                <div class="skills__section__item">
-                  <i class="fa-brands fa-js"></i>
-                  <p>JAVASCRIPT</p>
-                </div>
-                <div class="skills__section__item">
-                  <i class="fa-brands fa-react"></i>
-                  <p>REACT JS</p>
-                </div>
-                <div class="skills__section__item">
-                  <i class="fa-solid fa-database"></i>
-                  <p>POSTGRESQL</p>
-                </div>
-                <div class="skills__section__item">
-                  <i class="fa-brands fa-node"></i>
-                  <p>NODE JS</p>
-                </div>
-                <div class="skills__section__item">
-                  <i class="fa-brands fa-node-js"></i>
-                  <p>EXPRESS JS</p>
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="skills.title">Tecnologías Manejadas</h2>
+                    <p class="section-subtitle" data-i18n="skills.subtitle">Herramientas y lenguajes con los que trabajo
+                    </p>
                 </div>
 
-              </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">🌐</div>
+                        <h3 class="skill-name">HTML</h3>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🎨</div>
+                        <h3 class="skill-name">CSS</h3>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">📜</div>
+                        <h3 class="skill-name">JavaScript</h3>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">⚛️</div>
+                        <h3 class="skill-name">React JS</h3>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🟢</div>
+                        <h3 class="skill-name">Node JS</h3>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🚂</div>
+                        <h3 class="skill-name">Express JS</h3>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🐘</div>
+                        <h3 class="skill-name">PostgreSQL</h3>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">📊</div>
+                        <h3 class="skill-name">Git</h3>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🐙</div>
+                        <h3 class="skill-name">GitHub</h3>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🅱️</div>
+                        <h3 class="skill-name">Bootstrap</h3>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">💅</div>
+                        <h3 class="skill-name">SASS</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section education-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="education.title">Educación</h2>
+                    <p class="section-subtitle" data-i18n="education.subtitle">Formación académica y certificaciones</p>
+                </div>
+
+                <div class="education-grid">
+                    <div class="card education-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Desafío Latam: FullStack JavaScript</h3>
+                            <p class="card-subtitle">Mar 2022 - Ago 2023</p>
+                        </div>
+                        <div class="card-content">
+                            <p class="card-text">
+                                Formación completa en desarrollo web con JavaScript, abarcando tanto frontend como
+                                backend.
+                            </p>
+                            <a href="#" class="card-link" data-i18n="education.viewCertificate">Ver certificado</a>
+                        </div>
+                    </div>
+
+                    <div class="card education-card">
+                        <div class="card-header">
+                            <h3 class="card-title">CoderHouse: FullStack JavaScript</h3>
+                            <p class="card-subtitle">Ene 2023 - Ene 2024</p>
+                        </div>
+                        <div class="card-content">
+                            <p class="card-text">
+                                Especialización en desarrollo web con enfoque en aplicaciones modernas con JavaScript.
+                            </p>
+                            <a href="#" class="card-link" data-i18n="education.viewCertificate">Ver certificado</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="languages-container">
+                    <div class="card languages-card">
+                        <div class="card-header">
+                            <h3 class="card-title" data-i18n="education.languages">Idiomas</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="languages-grid">
+                                <div class="language-item">
+                                    <h4 class="language-name" data-i18n="education.spanish">Español</h4>
+                                    <div class="language-level">
+                                        <div class="level-bar filled"></div>
+                                        <div class="level-bar filled"></div>
+                                        <div class="level-bar filled"></div>
+                                        <div class="level-bar filled"></div>
+                                        <div class="level-bar filled"></div>
+                                    </div>
+                                    <p class="language-description" data-i18n="education.spanish.level">Nativo</p>
+                                </div>
+
+                                <div class="language-item">
+                                    <h4 class="language-name" data-i18n="education.english">Inglés</h4>
+                                    <div class="language-level">
+                                        <div class="level-bar filled"></div>
+                                        <div class="level-bar filled"></div>
+                                        <div class="level-bar filled"></div>
+                                        <div class="level-bar"></div>
+                                        <div class="level-bar"></div>
+                                    </div>
+                                    <p class="language-description" data-i18n="education.english.level">Pre-Intermedio
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="projects.title">Proyectos</h2>
+                    <p class="section-subtitle" data-i18n="projects.subtitle">Trabajos destacados para clientes reales
+                    </p>
+                </div>
+
+                <div class="projects-tabs">
+                    <!-- <div class="tabs-list">
+            <button class="tab-btn active" data-tab="all" data-i18n="projects.all">Todos</button>
+            <button class="tab-btn" data-tab="frontend" data-i18n="projects.frontend">Frontend</button>
+            <button class="tab-btn" data-tab="fullstack" data-i18n="projects.fullstack">Full Stack</button>
+          </div> -->
+
+                    <div class="tab-content active" data-tab="all">
+                        <div class="projects-grid">
+                            <!-- Project cards will be generated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="tab-content" data-tab="frontend">
+                        <div class="projects-grid">
+                            <!-- Frontend project cards will be generated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="tab-content" data-tab="fullstack">
+                        <div class="projects-grid">
+                            <!-- Fullstack project cards will be generated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="projects.title">Proyectos</h2>
+                    <p class="section-subtitle" data-i18n="projects.subtitle">Trabajos destacados para clientes reales
+                    </p>
+                </div>
+
+                <div class="projects-tabs">
+
+                    <div class="tab-content active" data-tab="all">
+                        <div class="projects-grid">
+                            <div class="card project-card">
+                                <div class="card-content">
+
+                                    <div style="display: flex; flex-direction: column;">
+                                        <div style="display: flex; align-items: center; ">
+                                            <img src="./assets/img/firmavirtual_logo.jpeg" style="
+                                            width: 5rem; height: 5rem;  
+                                            filter: brightness(1.1);
+                                            mix-blend-mode: multiply;
+                                            " alt="logo-firmavirtual" class="project-image">
+                                            <div style="display: flex; align-items: center; flex-direction: column; margin-left: 1rem;">
+                                                <p class="project-title">FirmaVirtual</p>
+                                                <p class="project-description">Jornada completa</p>
+                                            </div>
+                                        </div>
+
+                                        <div style="display: flex; flex-direction: column;">
+                                            <p class="project-title">Tecnologías</p>
+                                            <p class="project-description">React JS</p>
+                                            <p class="project-description">Material UI</p>
+                                        </div>
+
+                                        <div style="display: flex; flex-direction: column;">
+                                            <p class="project-title">Funciones</p>
+                                            <p class="project-description">
+                                                Diseño y desarrollo interfaces web interactivas utilizando React.js,
+                                                HTML5, CSS3, y JavaScript para mejorar la experiencia de usuario en
+                                                plataformas electrónica.
+
+                                                Colaboro estrechamente con el equipo de diseño para traducir
+                                                maquetas en interfaces de usuario dinámicas y responsivas,
+                                                asegurando la compatibilidad entre navegadores y dispositivos.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
 
             </div>
-          </section>
-
-          <!-- Education section -->
-
-          <section class="education__section container__section" id="education-section">
-
-            <div class="container__section__title section__title--box">
-              <h3>EDUCACIÓN</h3>
-              <i class="fa-sharp fa-solid fa-book"></i>
             </div>
+        </section>
 
-            <div class="education-section-container">
 
-              <div class="education-section-div">
-                <P>Desafío Latam: FullStack JavaScript</P>
-                <p class="container__section__text--secondary">Mar-2022 / Ago-2023</p>
-                <a class="container__section__link"
-                  href="https://desafiosdev.s3.amazonaws.com/uploads/certification/image/25401/aprobacion-final-proyecto-final-g28-9085.png"
-                  target="_blank" aria-label="Ir a certificado de finalizacion bootcamp desafiolatam">
-                  <span class="texto">Ver certificado</span>
-                  <span class="icono"><i class="fa-solid fa-right-to-bracket"></i></span>
-                </a>
-              </div>
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
+                    <p class="section-subtitle" data-i18n="contact.subtitle">¿Interesado en trabajar juntos? ¡Hablemos!
+                    </p>
+                </div>
 
-              <div class="education-section-div">
-                <P>CoderHouse: FullStack JavaScript</P>
-                <p class="container__section__text--secondary">Ene-2023 / Ene-2024</p>
-                <a class="container__section__link"
-                  href="https://www.coderhouse.com/cl/certificados/65d03d01bcded101772bee85?lang=es" target="_blank"
-                  aria-label="Ir a certificado de finalizacion de bootcam Corderhouse">
-                  <span class="texto">Ver certificado</span>
-                  <span class="icono"><i class="fa-solid fa-right-to-bracket"></i></span>
-                </a>
-              </div>
-
+                <!--     <div class="contact-grid">
+          <div class="card contact-form-card">
+            <div class="card-content">
+              <form class="contact-form">
+                <div class="form-group">
+                  <label for="name" class="form-label" data-i18n="contact.name">Nombre</label>
+                  <input type="text" id="name" class="form-input" data-i18n-placeholder="contact.name.placeholder" placeholder="Tu nombre">
+                </div>
+                
+                <div class="form-group">
+                  <label for="email" class="form-label" data-i18n="contact.email">Email</label>
+                  <input type="email" id="email" class="form-input" data-i18n-placeholder="contact.email.placeholder" placeholder="tu@email.com">
+                </div>
+                
+                <div class="form-group">
+                  <label for="message" class="form-label" data-i18n="contact.message">Mensaje</label>
+                  <textarea id="message" class="form-textarea" rows="4" data-i18n-placeholder="contact.message.placeholder" placeholder="¿En qué puedo ayudarte?"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full" data-i18n="contact.send">Enviar mensaje</button>
+              </form>
             </div>
-
-          </section>
-
-          <!-- Lenguages section -->
-
-          <section class="lenguages__section container__section" id="lenguage-section">
-
-            <div class="container__section__title section__title--box">
-              <h3>IDIOMAS</h3>
-              <i class="fa-solid fa-language"></i>
-            </div>
-
-            <div class="lenguages-section-container">
-              <div>
-                <p>Castellano</p>
-                <p class="container__section__text--secondary">- Nativo</p>
-              </div>
-              <div>
-                <p>Inglés</p>
-                <p class="container__section__text--secondary">- Pre-Intermedio</p>
-              </div>
-            </div>
-          </section>
-
-        </div>
-
-      </section>
-
-      <!-- Projects section -->
-
-      <section class="projects__section container__section" id="projects-section">
-
-        <div class="center_content">
-
-          <div class="container__section__title">
-            <h2 class="text__subtitle--greenDark">Proyectos para clientes reales</h2>
-            <i class="fa-solid fa-gear"></i>
           </div>
+           -->
+                <div class="card contact-info-card">
+                    <div class="card-content">
+                        <h3 class="info-title" data-i18n="contact.info">Información de contacto</h3>
 
-          <div class="cards__container">
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4 class="info-label">Email</h4>
+                                    <a href="mailto:contact@example.com"
+                                        class="info-value">josuevalbuenadev@gmail.com</a>
+                                </div>
+                            </div>
 
-            <div class="card">
+                            <div class="contact-info-item">
+                                <div class="info-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4 class="info-label">LinkedIn</h4>
+                                    <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer"
+                                        class="info-value">linkedin.com/in/josuevalbuena</a>
+                                </div>
+                            </div>
 
-              <img src="./assets/img/proyecto-real-1.png" alt="">
+                            <div class="contact-info-item">
+                                <div class="info-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4 class="info-label">GitHub</h4>
+                                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+                                        class="info-value">github.com/josuevalbuena</a>
+                                </div>
+                            </div>
+                        </div>
 
-              <div class="card__text">
-
-                <div class="card__text--description">
-                  <h3 class="card__text--title">Landing Page MAXagua</h3>
-                  <p class="card__text--normal">
-                    Proyecto para la empresa MAXagua. Consiste en una landing page para mostrar quien es la empresa, que
-                    hace, que ofrece y como lo hace. Se implemento con HTML, CSS, y conceptos como
-                    Responsive Design.
-                  </p>
+                        <div class="availability-info">
+                            <h3 class="info-title" data-i18n="contact.availability">Disponibilidad</h3>
+                            <p class="info-text" data-i18n="contact.availability.text">
+                                Actualmente disponible para proyectos freelance.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="card__text--row">
-                  <h4 class="card__text--subtitle">Tecnologías:</h4>
-                  <p class="card__text--normal">HTML</p>
-                  <p class="card__text--normal">CSS</p>
-                </div>
-
-                <div class="card__text--row">
-                  <h4 class="card__text--subtitle">Caracteristicas</h4>
-                  <p class="card__text--normal">Front End</p>
-                  <p class="card__text--normal">Mobile Fisrt</p>
-                  <p class="card__text--normal">Responsive Design</p>
-                </div>
-
-                <div class="card__buttons">
-                  <a href="https://maxagua-demo.netlify.app/" target="_blank" class="button"
-                    aria-label="Ir a demo maxagua">Ver Demo</a>
-                </div>
-
-              </div>
             </div>
-
-
-
-          </div>
-
-        </div>
-        <!-- Rendering from JavaScript soon-->
-      </section>
-
-      <section class="projects__section container__section" id="projects-section">
-
-        <div class="center_content">
-
-          <div class="container__section__title">
-            <h2 class="text__subtitle--greenDark">Proyectos personales</h2>
-            <i class="fa-solid fa-gear"></i>
-          </div>
-
-          <div class="cards__container">
-
-            <div class="card">
-
-              <img src="./assets/img/proyecto_1.PNG" alt="">
-
-              <div class="card__text">
-
-                <div class="card__text--description">
-                  <h3 class="card__text--title">Landing Page HTML CSS</h3>
-                  <p class="card__text--normal">
-                    Proyecto final presentado en el curso de Introducción al Desarrollo Web en la
-                    academia CoderHouse. Este pequeño proyecto es una landing page donde se
-                    pusieron a prueba los conocimientos en HTML, CSS, Sass y conceptos como
-                    Responsive Design.
-                  </p>
-                </div>
-
-                <div class="card__text--row">
-                  <h4 class="card__text--subtitle">Tecnologías:</h4>
-                  <p class="card__text--normal">HTML</p>
-                  <p class="card__text--normal">CSS</p>
-                  <p class="card__text--normal">SASS</p>
-                </div>
-
-                <div class="card__text--row">
-                  <h4 class="card__text--subtitle">Caracteristicas</h4>
-                  <p class="card__text--normal">Front End</p>
-                  <p class="card__text--normal">Mobile Fisrt</p>
-                  <p class="card__text--normal">Responsive Design</p>
-                </div>
-
-                <div class="card__buttons">
-                  <a href="https://github.com/JosueValbuena/CoderHouseDesarroWeb" target="_blank" class="button"
-                    aria-label="Ir a respositorio del proyecto 1">Ver
-                    codigo</a>
-                  <a href="https://allstorefake.netlify.app/" target="_blank" class="button"
-                    aria-label="Ir a la demo del proyecto 1">Ver Demo</a>
-                </div>
-
-              </div>
             </div>
-
-            <div class="card">
-
-              <img src="./assets/img/proyecto_2.png" alt="">
-
-              <div class="card__text">
-
-                <div class="card__text--description">
-                  <h3 class="card__text--title">Proyecto Ecommerce JavaScript</h3>
-                  <p class="card__text--normal">
-                    Proyecto final presentado en el curso JavaScript en la academia CoderHouse.
-                    Es un pequeño ecommerce hecho totalmente con JavaScript. El usuario puede ver una
-                    serie de productos, donde puede añadirlos a un carrito y simular una compra.
-                  </p>
-                </div>
-
-                <div class="card__text--row">
-                  <h4 class="card__text--subtitle">Tecnologías:</h4>
-                  <p class="card__text--normal">HTML</p>
-                  <p class="card__text--normal">CSS</p>
-                  <p class="card__text--normal">JS</p>
-                </div>
-
-                <div class="card__text--row">
-                  <h4 class="card__text--subtitle">Caracteristicas</h4>
-                  <p>Front End</p>
-                  <p>Mobile Fisrt</p>
-                  <p>Responsive Design</p>
-                </div>
-
-                <div class="card__buttons">
-                  <a href="https://github.com/JosueValbuena/CoderHouseJavaScript" target="_blank" class="button"
-                    aria-label="Ir a respositorio del proyecto-1">Ver
-                    codigo</a>
-                  <a href="https://shoppingcard-coderhouse-js-jv.netlify.app/" target="_blank" class="button"
-                    aria-label="Ir a demo del proyecto-2">Ver
-                    Demo</a>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="card">
-
-              <img src="./assets/img/proyecto_3.png" alt="">
-
-              <div class="card__text">
-
-                <div class="card__text--description">
-                  <h3 class="card__text--title">Proyecto Ecommerce React JS</h3>
-                  <p class="card__text--normal">
-                    Proyecto final presentado en el curso REACT JS de la academia CoderHouse.
-                    Consiste en un pequeño ecommerce donde puedes agregar productos al carrito,
-                    ver productos por categorías, navegación por rutas, persistencia de datos
-                    con base de datos Firebase, alertas con la librería Toastify, etc.
-                  </p>
-                </div>
-
-                <div class="card__text--row">
-                  <h4 class="card__text--subtitle">Tecnologías:</h4>
-                  <p class="card__text--normal">REACT</p>
-                  <p class="card__text--normal">FIREBASE</p>
-                </div>
-
-                <div class="card__text--row">
-                  <h4 class="card__text--subtitle">Caracteristicas</h4>
-                  <p class="card__text--normal">Front End</p>
-                </div>
-
-                <div class="card__buttons">
-                  <a href="https://github.com/JosueValbuena/CoderHouseReact" target="_blank" class="button"
-                    aria-label="Ir al repositorio del proyecto-3">Ver
-                    codigo</a>
-                  <a href="https://shoppingcart-coderhouse-react-jv.netlify.app/" target="_blank" class="button"
-                    aria-label="Ir a la demo del proyecto-3">Ver
-                    Demo</a>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="card">
-
-              <img src="./assets/img/proyecto_4.png" alt="">
-
-              <div class="card__text">
-
-                <div class="card__text--description">
-                  <h3 class="card__text--title">Proyecto PERN</h3>
-                  <p class="card__text--normal">
-                    Proyecto final presentado en la academia Desafío Latam.
-                    Consiste en un ecommerce donde un usuario puede: registrarse,
-                    iniciar sesión, publicar artículos, dejar comentarios en artículos
-                    de otros vendedores, etc.
-                  </p>
-                </div>
-
-                <div class="card__text--row">
-                  <h4 class="card__text--subtitle">Tecnologías:</h4>
-                  <p class="card__text--normal">REACT JS</p>
-                  <p class="card__text--normal">NODE JS</p>
-                  <p class="card__text--normal">EXPRESS JS</p>
-                  <p class="card__text--normal">POSTGRESQL</p>
-                </div>
-
-                <div class="card__text--row">
-                  <h4 class="card__text--subtitle">Caracteristicas</h4>
-                  <p class="card__text--normal">Front End</p>
-                  <p class="card__text--normal">Back End</p>
-                  <p class="card__text--normal">Full Stack</p>
-                </div>
-
-                <div class="card__buttons">
-                  <a href="https://github.com/JosueValbuena/DLProyectoFinalFullStack" target="_blank" class="button">Ver
-                    codigo</a>
-                  <a href="https://bicimarketplacefront.onrender.com/" target="_blank" class="button">Ver
-                    Demo</a>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="card">
-
-              <img src="./assets/img/proyecto_5.PNG" alt="">
-
-              <div class="card__text">
-
-                <div class="card__text--description">
-                  <h3 class="card__text--title">Portafolio</h3>
-                  <p class="card__text--normal">
-                    Proyecto personal donde ofrezco algo de información
-                    sobre mí, como mis estudios, información personal
-                    y de contacto, y muestro los proyectos en los que
-                    he trabajado hasta el momento utilizando diversas
-                    tecnologías de desarrollo.
-                  </p>
-                </div>
-
-                <div class="card__text--row">
-                  <h4 class="card__text--subtitle">Tecnologías:</h4>
-                  <p class="card__text--normal">HTML</p>
-                  <p class="card__text--normal">CSS</p>
-                  <p class="card__text--normal">JS</p>
-                </div>
-
-                <div class="card__text--row">
-                  <h4 class="card__text--subtitle">Caracteristicas</h4>
-                  <p class="card__text--normal">Front End</p>
-                  <p class="card__text--normal">Mobile First</p>
-                  <p class="card__text--normal">Responsive Design</p>
-                </div>
-
-                <div class="card__buttons">
-                  <a href="https://github.com/JosueValbuena/JosueValbuena.github.io" target="_blank" class="button">Ver
-                    codigo</a>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="card">
-
-              <img src="./assets/img/proyecto_en_construccion.PNG" alt="">
-
-              <div class="card__text">
-
-                <div class="card__text--description">
-                  <h3 class="card__text--title">Proyecto MERN (En proceso)</h3>
-                  <p class="card__text--normal">
-                    Proyecto fullstack de un ecommerce donde además se
-                    utiliza una librería de componentes para React
-                    llamada Material UI. El proyecto contará con todas
-                    las funcionalidades básicas de un ecommerce.
-                    (Demo no disponible)
-                  </p>
-                </div>
-
-                <div class="card__text--row">
-                  <h4 class="card__text--subtitle">Tecnologías:</h4>
-                  <p class="card__text--normal">Material UI</p>
-                  <p class="card__text--normal">REACT JS</p>
-                  <p class="card__text--normal">NODE JS</p>
-                  <p class="card__text--normal">EXPRESS JS</p>
-                  <p class="card__text--normal">Mongo DB</p>
-                </div>
-
-                <div class="card__text--row">
-                  <h4 class="card__text--subtitle">Caracteristicas</h4>
-                  <p class="card__text--normal">Front End</p>
-                  <p class="card__text--normal">Back End</p>
-                  <p class="card__text--normal">Full Stack</p>
-                </div>
-
-                <div class="card__buttons">
-                  <a href="https://github.com/JosueValbuena/CoderHouse-BackEnd-FrontEnd" target="_blank"
-                    class="button">Ver
-                    codigo
-                  </a>
-                  <a href="https://coderhouse-fullstack-jv.netlify.app/" target="_blank" class="button">
-                    Ver Demo
-                  </a>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="card">
-
-              <img src="./assets/img/proyecto_6.png" alt="imagen proyecto be flat mates">
-
-              <div class="card__text">
-
-                <div class="card__text--description">
-                  <h3 class="card__text--title">Proyecto Be Flat Mates (En proceso)</h3>
-                  <p class="card__text--normal">
-                    Proyecto fullstack que consiste en ser una herramienta facil de usar para encontrar roomies en
-                    santiago.
-                    Se emplea responsive design, mobile first y estara hecho con react, typescript, express y mongoDB.
-                  </p>
-                </div>
-
-                <div class="card__text--row">
-                  <h4 class="card__text--subtitle">Tecnologías:</h4>
-                  <p class="card__text--normal">Material UI</p>
-                  <p class="card__text--normal">REACT JS</p>
-                  <p class="card__text--normal">NODE JS</p>
-                  <p class="card__text--normal">EXPRESS JS</p>
-                  <p class="card__text--normal">Mongo DB</p>
-                </div>
-
-                <div class="card__text--row">
-                  <h4 class="card__text--subtitle">Caracteristicas</h4>
-                  <p class="card__text--normal">Front End</p>
-                  <p class="card__text--normal">Back End</p>
-                  <p class="card__text--normal">Full Stack</p>
-                </div>
-
-                <div class="card__buttons">
-                  <a href="https://beflatmates.netlify.app/" target="_blank" class="button"
-                    aria-label="Ir a la demo del proyecto be flat mates">Ver
-                    Ver Demo
-                  </a>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-        <!-- Rendering from JavaScript soon-->
-      </section>
-
-      <!-- Experience section -->
-
-      <section class="experience__section container__section" id="experience-section">
-        <div class="container__section__title">
-          <h2 class="text__subtitle--greenDark">Experiencia</h2>
-          <i class="fa-solid fa-laptop"></i>
-        </div>
-
-        <div class="center_content">
-
-          <div class="experience__section__card">
-
-            <div class="experience__section__card__head">
-              <img class="experience__section__card__head__img" src="./assets/img/firmavirtual_logo.jpeg">
-              <div class="experience__section__card__head__text">
-                <h3>FirmaVirtual</h3>
-                <p>Jornada completa</p>
-              </div>
-            </div>
-
-            <div class="experience__section__card__body">
-              <h3>Desarrollador front-end</h3>
-              <p>Ene-2024 - Actualidad</p>
-              <p>Santiago, Chile. - Remoto</p>
-            </div>
-
-            <div class="experience__section__card__body">
-              <h3>Tecnologías</h3>
-              <p>React JS</p>
-              <p>Material UI</p>
-            </div>
-
-            <div class="experience__section__card__body">
-              <h3>Funciones</h3>
-              <p>
-                Diseño y desarrollo interfaces web interactivas utilizando
-                React.js, HTML5, CSS3, y JavaScript para mejorar la experiencia de
-                usuario en plataformas electrónica.
-              </p>
-              <p>
-                Colaboro estrechamente con el equipo de diseño para traducir
-                maquetas en interfaces de usuario dinámicas y responsivas,
-                asegurando la compatibilidad entre navegadores y dispositivos.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
+        </section>
     </main>
-    <!-- Footer Section -->
 
-    <footer class="footer__section container__section" id="footer-section">
-      <!-- <h2>CONTACTO:</h2>
-    <div>
-      <a href="https://www.instagram.com/joshvalbuenah/" target="_blank"><i
-      class="fa-brands fa-square-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/josuevalbuena/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-      </div>-->
-      <div class="footer__section__develop">
-        <h3>Desarrollado por: Josué Valbuena Huerta</h3>
-      </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2 class="footer-logo">JRVH</h2>
+                    <p class="footer-tagline" data-i18n="footer.developer">Desarrollador Web Full Stack</p>
+                </div>
+
+                <div class="footer-social">
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:contact@example.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">
+                    &copy; <span id="current-year"></span> Josué Valbuena Huerta. <span data-i18n="footer.rights">Todos
+                        los derechos reservados.</span>
+                </p>
+            </div>
+        </div>
     </footer>
 
-  </div>
-  
-    <a href="#hero__section" class="toTopButton" aria-label="Ir al inicio de la pagina">
-      <i class="fa-solid fa-arrow-up toTopButton__icon"></i>
-    </a>
+    <!-- Scroll to top button -->
+    <button id="scroll-top-btn" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
-  <script src="https://kit.fontawesome.com/64da6a45ed.js" crossorigin="anonymous"></script>
-  <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
