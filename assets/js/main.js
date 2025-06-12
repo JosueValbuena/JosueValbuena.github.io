@@ -404,7 +404,7 @@ function createProjectCard(project, lang) {
         ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
       </div>
       <div class="project-actions">
-        <a href="${project.demoUrl}" class="btn btn-outline project-btn">${demoText}</a>
+        <a href="${project.demoUrl}" class="btn btn-outline project-btn" rel="noopener noreferrer">${demoText}</a>
         ${project?.codeUrl && `<a href="${project.codeUrl}" class="btn btn-outline project-btn">${codeText}</a>`}
       </div>
     </div>
