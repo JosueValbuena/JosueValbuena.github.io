@@ -114,14 +114,9 @@ const translations = {
     // Experience Section
     "experience.title": "Work experience",
     "experience.subtitle": "Companies I have worked with",
-    "projects.all": "Todos",
-    "projects.frontend": "Frontend",
-    "projects.fullstack": "Full Stack",
-    "projects.projectName": "Nombre del Proyecto",
     "experience.position": "About position",
     "experience.positionDescription": "Design and development of interactive web interfaces using React.js, HTML5, CSS3, and JavaScript to enhance the user experience on electronic platforms. I work closely with the design team to translate mockups into dynamic and responsive user interfaces, ensuring cross-browser and cross-device compatibility.",
-    "projects.demo": "Demo",
-    "projects.code": "Código",
+    "experience.technologies": 'Technologies',
 
     // Contact Section
     "contact.title": "Contact",
@@ -185,14 +180,9 @@ const translations = {
     // Experience Section
     "experience.title": "Experiencia laboral",
     "experience.subtitle": "Empresas con las que he trabajado",
-    "projects.all": "Todos",
-    "projects.frontend": "Frontend",
-    "projects.fullstack": "Full Stack",
-    "projects.projectName": "Nombre del Proyecto",
     "experience.position": 'Funciones',
     "experience.positionDescription": "Diseño y desarrollo de interfaces web interactivas utilizando React.js, HTML5, CSS3 y JavaScript para mejorar la experiencia de usuario en plataformas electrónicas. Colaboro estrechamente con el equipo de diseño para traducir maquetas en interfaces de usuario dinámicas y responsivas, asegurando la compatibilidad entre navegadores y dispositivos.",
-    "projects.demo": "Demo",
-    "projects.code": "Código",
+    "experience.technologies": 'Tecnologias',
 
     // Contact Section
     "contact.title": "Contacto",
