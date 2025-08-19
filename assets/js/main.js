@@ -40,20 +40,31 @@ const projects = [
     description: 'Proyecto que consiste en ser una herramienta facil de usar para encontrar roomies en santiago. Se emplea responsive design, mobile first y estara hecho con MERN y Typescript.',
     image: './assets/img/proyecto-3-beflatmates.png',
     tags: ['MERN', 'TypeScript'],
-    demoUrl: 'https://beflatmates.netlify.app/',
+    demoUrl: 'https://beflatmates.cl/',
+    codeUrl: '',
+    type: 'fullstack'
+  },
+  {
+    id: 4,
+    title: 'Price Optimizer Pro App',
+    year: '2025',
+    description: 'Proyecto desarrollado para un cliente real a través de Upwork. Trata de un panel de administración con gestión de inventario para productos en plataformas de comercio electrónico como Amazon y PayPal, Gestiona y muestra metricas sobre precios, ventas, y gestiones relacionadas con productos.',
+    image: './assets/img/proyecto-4-amazonrepricer.png',
+    tags: ['Typescript', 'ReactJS', 'Shadcn'],
+    demoUrl: 'https://upwork-first-project.netlify.app/',
     codeUrl: '',
     type: 'frontend'
   },
   {
-    id: 4,
-    title: 'Amazon repricer',
+    id: 5,
+    title: 'Price Optimizer Pro Landing',
     year: '2025',
-    description: 'Proyecto desarrollado para un cliente real a través de Upwork. Se trata de un panel de administración con gestión de inventario para productos en plataformas de comercio electrónico como Amazon y PayPal.',
-    image: './assets/img/proyecto-4-amazonrepricer.png',
-    tags: ['Typescript', 'ReactJS', 'TailwindCss', 'Shadcn'],
-    demoUrl: 'https://upwork-first-project.netlify.app/',
+    description: 'Proyecto desarrollado para un cliente real a través de Upwork. Landing page hecha para presentar la app de Price Optimizer Pro. Contiene la informacion de la app tales como: precios del servicio, clientes que ya usan y confian en la app, como funciona la app y las soluciones que ofrece.',
+    image: './assets/img/proyecto-5-amazonrepricer-landing.png',
+    tags: ['HTML', 'CSS', 'JS'],
+    demoUrl: 'https://upwork-first-landing.netlify.app/',
     codeUrl: '',
-    type: 'fullstack'
+    type: 'frontend'
   }
   /* {
     id: 4,
@@ -429,7 +440,7 @@ function createProjectCard(project, lang) {
         ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
       </div>
       <div class="project-actions">
-        <a href="${project.demoUrl}" class="btn btn-outline project-btn" rel="noopener noreferrer">${demoText}</a>
+        <a href="${project.demoUrl}" target='_blank' class="btn btn-outline project-btn" rel="noopener noreferrer">${demoText}</a>
         ${project?.codeUrl && `<a href="${project.codeUrl}" class="btn btn-outline project-btn">${codeText}</a>`}
       </div>
     </div>
