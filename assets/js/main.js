@@ -24,18 +24,18 @@ const projects = [
   },
   {
     id: 2,
-    title: 'E-commerce(En proceso)',
-    year: '2024',
-    description: 'Proyecto fullstack de un ecommerce donde además se utiliza una librería de componentes para React llamada Material UI. El proyecto contará con todas las funcionalidades básicas de un ecommerce.',
-    image: './assets/img/proyecto_en_construccion.PNG',
-    tags: ['MERN'],
-    demoUrl: 'https://coderhouse-fullstack-jv.netlify.app/',
-    codeUrl: 'https://github.com/JosueValbuena/CoderHouse-BackEnd-FrontEnd',
+    title: 'BeFlatMates - Landing',
+    year: '2025',
+    description: 'Proyecto desarrollado para promocionar y captar posibles clientes para la web app BeFlatMates. Está desarrollado con HTML, CSS y JS, y además, cuenta con las metodologías Responsive Web Design y Mobile First.',
+    image: './assets/img/proyecto_6_beflatmates_landing.png',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    demoUrl: 'https://beflatmates-landing.netlify.app/',
+    codeUrl: '',
     type: 'fullstack'
   },
   {
     id: 3,
-    title: 'Proyecto Be Flat Mates (En proceso)',
+    title: 'BeFlatMates - Web App (En proceso)',
     year: '2024',
     description: 'Proyecto que consiste en ser una herramienta facil de usar para encontrar roomies en santiago. Se emplea responsive design, mobile first y estara hecho con MERN y Typescript.',
     image: './assets/img/proyecto-3-beflatmates.png',
@@ -65,18 +65,18 @@ const projects = [
     demoUrl: 'https://upwork-first-landing.netlify.app/',
     codeUrl: '',
     type: 'frontend'
-  }
-  /* {
-    id: 4,
-    title: 'Nombre del Proyecto 6',
-    year: '2021',
-    description: 'Breve descripción del proyecto y las tecnologías utilizadas para su desarrollo.',
-    image: 'https://via.placeholder.com/600x400',
-    tags: ['React', 'Node.js', 'MongoDB'],
-    demoUrl: '#',
-    codeUrl: '#',
+  },
+  {
+    id: 6,
+    title: 'E-commerce(En proceso)',
+    year: '2024',
+    description: 'Proyecto fullstack de un ecommerce donde además se utiliza una librería de componentes para React llamada Material UI. El proyecto contará con todas las funcionalidades básicas de un ecommerce.',
+    image: './assets/img/proyecto_en_construccion.PNG',
+    tags: ['MERN'],
+    demoUrl: 'https://coderhouse-fullstack-jv.netlify.app/',
+    codeUrl: 'https://github.com/JosueValbuena/CoderHouse-BackEnd-FrontEnd',
     type: 'fullstack'
-  } */
+  },
 ];
 
 // Translations
