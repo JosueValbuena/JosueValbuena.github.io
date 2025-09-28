@@ -68,6 +68,17 @@ const projects = [
   },
   {
     id: 6,
+    title: 'Francés con Esteban - Landing',
+    year: '2025',
+    description: 'Proyecto desarrollado para un cliente profesor de francés. Trata sobre una landing page donde el cliente quiere mostrar informacion sobre sus servicios, cuenta con botones en cartas y formulario que envian la informacion directo al whatsapp del cliente.',
+    image: './assets/img/proyecto_7_francesconesteban_landing.png',
+    tags: ['HTML', 'CSS', 'JS'],
+    demoUrl: 'https://coderhouse-fullstack-jv.netlify.app/',
+    codeUrl: '',
+    type: 'fullstack'
+  },
+  {
+    id: 7,
     title: 'E-commerce(En proceso)',
     year: '2024',
     description: 'Proyecto fullstack de un ecommerce donde además se utiliza una librería de componentes para React llamada Material UI. El proyecto contará con todas las funcionalidades básicas de un ecommerce.',
