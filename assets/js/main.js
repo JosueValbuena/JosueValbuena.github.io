@@ -73,7 +73,7 @@ const projects = [
     description: 'Proyecto desarrollado para un cliente profesor de francés. Trata sobre una landing page donde el cliente quiere mostrar informacion sobre sus servicios, cuenta con botones en cartas y formulario que envian la informacion directo al whatsapp del cliente.',
     image: './assets/img/proyecto_7_francesconesteban_landing.png',
     tags: ['HTML', 'CSS', 'JS'],
-    demoUrl: 'https://coderhouse-fullstack-jv.netlify.app/',
+    demoUrl: 'https://frenchclassdemo.netlify.app/',
     codeUrl: '',
     type: 'fullstack'
   },
