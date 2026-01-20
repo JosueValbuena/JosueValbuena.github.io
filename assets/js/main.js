@@ -36,7 +36,7 @@ const projects = [
   {
     id: 3,
     title: 'BeFlatMates - Web App (En proceso)',
-    year: '2024',
+    year: '2025',
     description: 'Proyecto que consiste en ser una herramienta facil de usar para encontrar roomies en santiago. Se emplea responsive design, mobile first y estara hecho con MERN y Typescript.',
     image: './assets/img/proyecto-3-beflatmates.png',
     tags: ['MERN', 'TypeScript'],
@@ -72,13 +72,35 @@ const projects = [
     year: '2025',
     description: 'Proyecto desarrollado para un cliente profesor de francés. Trata sobre una landing page donde el cliente quiere mostrar informacion sobre sus servicios, cuenta con botones en cartas y formulario que envian la informacion directo al whatsapp del cliente.',
     image: './assets/img/proyecto_7_francesconesteban_landing.png',
-    tags: ['HTML', 'CSS', 'JS'],
+    tags: ['HTML', 'CSS', 'JS', 'NodeJS', 'MongoDB'],
     demoUrl: 'https://frenchclassdemo.netlify.app/',
     codeUrl: '',
     type: 'fullstack'
   },
   {
     id: 7,
+    title: 'Dearpaoo - Ecommerce',
+    year: '2026',
+    description: 'Proyecto fullstack de un ecommerce que incluye un panel administrativo para la gestión de modulos. La aplicación contempla las funcionalidades esenciales de un ecommerce, integrando frontend y backend en una solución completa.',
+    image: './assets/img/proyecto_8_dearpaoo_ecommerce.png',
+    tags: ['TS', 'Nextjs', 'Prisma', 'Postgresql'],
+    demoUrl: 'https://coderhouse-fullstack-jv.netlify.app/',
+    codeUrl: 'https://github.com/JosueValbuena/CoderHouse-BackEnd-FrontEnd',
+    type: 'fullstack'
+  },
+  {
+    id: 8,
+    title: 'Hospital Clinico del Valle - Landing',
+    year: '2026',
+    description: 'Proyecto frontend de una landing page institucional para un hospital clínico, orientada a la presentación clara de servicios médicos, información institucional y canales de contacto.',
+    image: './assets/img/proyecto_9_hcdv_landing.png',
+    tags: ['HTML', 'CSS', 'JS', 'NodeJS'],
+    demoUrl: 'https://coderhouse-fullstack-jv.netlify.app/',
+    codeUrl: 'https://github.com/JosueValbuena/CoderHouse-BackEnd-FrontEnd',
+    type: 'fullstack'
+  },
+  {
+    id: 90,
     title: 'E-commerce(En proceso)',
     year: '2024',
     description: 'Proyecto fullstack de un ecommerce donde además se utiliza una librería de componentes para React llamada Material UI. El proyecto contará con todas las funcionalidades básicas de un ecommerce.',
