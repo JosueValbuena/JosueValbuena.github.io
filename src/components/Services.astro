@@ -1,0 +1,101 @@
+---
+import {
+  Monitor,
+  ShoppingCart,
+  Smartphone,
+  Code2,
+  Database,
+  Layout,
+} from "@lucide/astro";
+
+const services = [
+  {
+    icon: Monitor,
+    title: "Sitios Web",
+    color: "hsl(160 84% 39%)",
+    items: ["Landing Pages", "Portafolios", "Responsive Design", "SEO", "Performance"],
+  },
+  {
+    icon: ShoppingCart,
+    title: "E-Commerce",
+    color: "hsl(200 80% 55%)",
+    items: ["Tiendas online", "Catálogos", "Pasarelas de pago", "Admin panels"],
+  },
+  {
+    icon: Code2,
+    title: "Front-End",
+    color: "hsl(280 70% 60%)",
+    items: ["React", "TypeScript", "Tailwind CSS", "Material UI", "Shadcn/UI"],
+  },
+  {
+    icon: Database,
+    title: "Back-End",
+    color: "hsl(30 80% 55%)",
+    items: ["Node.js", "Express", "PostgreSQL", "Prisma ORM", "REST APIs"],
+  },
+  {
+    icon: Layout,
+    title: "UI/UX",
+    color: "hsl(340 70% 55%)",
+    items: ["Figma a código", "Mobile First", "Atomic Design", "Clean Code"],
+  },
+  {
+    icon: Smartphone,
+    title: "Web Apps",
+    color: "hsl(50 80% 50%)",
+    items: ["SPAs", "Dashboards", "CRUD completos", "Auth & permisos"],
+  },
+];
+---
+
+<section id="servicios" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        Lo que <span class="text-gradient">puedo hacer</span>
+      </h2>
+      <p class="text-muted-foreground max-w-xl mx-auto">
+        Soluciones digitales completas para llevar tu proyecto al siguiente nivel
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {services.map((service) => {
+        const Icon = service.icon;
+
+        return (
+          <div class="card-gradient rounded-xl p-6 border border-border hover:border-primary/30 hover-glow transition-all group">
+            
+            <div
+              class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 border"
+              style={`border-color: ${service.color}40; background: ${service.color}10;`}
+            >
+              <Icon size={24} style={`color: ${service.color};`} />
+            </div>
+
+            <h3 class="text-lg font-semibold mb-3 text-foreground">
+              {service.title}
+            </h3>
+
+            <ul class="space-y-1.5">
+              {service.items.map((item) => (
+                <li class="text-sm text-muted-foreground flex items-center gap-2">
+                  <span
+                    class="w-1.5 h-1.5 rounded-full shrink-0"
+                    style={`background: ${service.color};`}
+                  />
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+          </div>
+        );
+      })}
+    </div>
+
+  </div>
+</section>

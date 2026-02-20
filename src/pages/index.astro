@@ -1,0 +1,51 @@
+---
+import "../assets/styles/global.css";
+import Navbar from "../components/Navbar.astro";
+import FloatingButtons from "../components/FloatingButtons.astro";
+import Hero from "../components/Hero.astro";
+import Services from "../components/Services.astro";
+import Projects from "../components/Projects.astro";
+import Experience from "../components/Experience.astro";
+import Contact from "../components/Contact.astro";
+---
+
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Josué Valbuena | Desarrollador Full-Stack</title>
+  </head>
+  <body class="min-h-screen bg-background">
+    <Navbar />
+    <FloatingButtons />
+    
+    <main>
+      <Hero />
+      <Services />
+      <Projects />
+      <Experience />
+      <Contact />
+    </main>
+    
+    <footer class="py-8 text-center text-sm text-muted-foreground border-t border-border">
+      <p>© 2026 Josué Valbuena. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+            entry.target.classList.remove('opacity-0', 'translate-y-8', 'scale-95');
+            observer.unobserve(entry.target); // Solo anima una vez
+          }
+        });
+      }, { threshold: 0.1 });
+
+      // Observar todos los elementos con la clase 'animate-on-scroll'
+      document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
+  </body>
+</html>

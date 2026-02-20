@@ -1,0 +1,55 @@
+---
+import { Menu, X } from "@lucide/astro";
+
+
+const navLinks = [
+  { label: "Servicios", href: "#servicios" },
+  { label: "Proyectos", href: "#proyectos" },
+  { label: "Experiencia", href: "#experiencia" },
+  { label: "Contacto", href: "#contacto" },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
+  <div class="container max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
+    <a href="#" class="text-xl font-bold font-heading text-gradient">JRVH</a>
+
+    <div class="hidden md:flex items-center gap-8">
+      {navLinks.map((link) => (
+        <a href={link.href} class="text-sm text-muted-foreground hover:text-foreground transition-colors">
+          {link.label}
+        </a>
+      ))}
+    </div>
+
+    <button id="menu-btn" class="md:hidden text-foreground" aria-label="Toggle menu">
+      <Menu id="icon-menu" size={24} />
+      <X id="icon-close" size={24} class="hidden" />
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-background border-b border-border px-6 py-4 space-y-3">
+    {navLinks.map((link) => (
+      <a href={link.href} class="mobile-link block text-sm text-muted-foreground hover:text-foreground transition-colors">
+        {link.label}
+      </a>
+    ))}
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const iconMenu = document.getElementById('icon-menu');
+  const iconClose = document.getElementById('icon-close');
+  const links = document.querySelectorAll('.mobile-link');
+
+  const toggleMenu = () => {
+    menu?.classList.toggle('hidden');
+    iconMenu?.classList.toggle('hidden');
+    iconClose?.classList.toggle('hidden');
+  };
+
+  btn?.addEventListener('click', toggleMenu);
+  links.forEach(link => link.addEventListener('click', toggleMenu));
+</script>

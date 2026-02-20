@@ -1,0 +1,176 @@
+---
+/* import proyectoMaxagua from "@/assets/proyecto-maxagua.png";
+import proyectoBeflatmatesApp from "@/assets/proyecto-beflatmates-app.png";
+import proyectoRepricer from "@/assets/proyecto-repricer.png";
+import proyectoFrances from "@/assets/proyecto-frances.png";
+import proyectoDearpaoo from "@/assets/proyecto-dearpaoo.png";
+import proyectoHospital from "@/assets/proyecto-hospital.png"; */
+
+const projects = [
+  {
+    title: "Price Optimizer Pro",
+    year: "2025",
+    description:
+      "Dashboard para gestión de inventario en Amazon/eBay. Arquitectura Atomic Design con métricas de precios y ventas.",
+    tech: ["React", "TypeScript", "Shadcn/UI", "Tailwind"],
+    image: "/images/proyecto-repricer-app.png",
+    demo: "https://upwork-first-project.netlify.app/",
+    featured: false,
+  },
+  {
+    title: "Price Optimizer Pro - Landing",
+    year: "2025",
+    description:
+      "Landing para Price Optimizer Pro. Dashboard para gestión de inventario en Amazon/eBay. Arquitectura Atomic Design con métricas de precios y ventas.",
+    tech: ["React", "TypeScript", "Shadcn/UI", "Tailwind"],
+    image: "/images/proyecto-repricer-lading.png",
+    demo: "https://upwork-first-project.netlify.app/",
+    featured: false,
+  },
+  {
+    title: "Dearpaoo E-commerce",
+    year: "2026",
+    description:
+      "E-commerce fullstack con panel administrativo para gestión de módulos completos.",
+    tech: ["TypeScript", "Next.js", "Prisma", "PostgreSQL"],
+    image: "/images/proyecto-dearpaoo.png",
+    demo: "https://coderhouse-fullstack-jv.netlify.app/",
+    code: "https://github.com/JosueValbuena/CoderHouse-BackEnd-FrontEnd",
+  },
+  {
+    title: "BeFlatMates",
+    year: "2025",
+    description:
+      "Herramienta para encontrar roomies en Santiago. Full-stack con diseño responsivo y Mobile First.",
+    tech: ["React", "TypeScript", "Node.js", "Express"],
+    image: "/images/proyecto-beflatmates-app.png",
+    demo: "https://beflatmates.cl/",
+  },
+  {
+    title: "BeFlatMates - Landing",
+    year: "2025",
+    description:
+      "Landing de Beflatmates.cl. Herramienta para encontrar roomies en Santiago. Full-stack con diseño responsivo y Mobile First.",
+    tech: ["React", "TypeScript", "Node.js", "Express"],
+    image: "/images/proyecto-beflatmates-landing.png",
+    demo: "https://beflatmates.cl/",
+  },
+  {
+    title: "Hospital Clínico del Valle",
+    year: "2026",
+    description:
+      "Landing institucional para hospital clínico con servicios médicos e información de contacto.",
+    tech: ["HTML", "CSS", "JavaScript", "Node.js"],
+    image: "/images/proyecto-hospital.png",
+    demo: "https://hospitalclinicodelvalle.netlify.app/",
+  },
+  {
+    title: "Landing MAXagua",
+    year: "2025",
+    description:
+      "Landing page corporativa con Responsive Design para empresa de servicios.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    image: "/images/proyecto-maxagua.png",
+    demo: "https://maxagua-demo.netlify.app/",
+  },
+  {
+    title: "Francés con Esteban",
+    year: "2025",
+    description:
+      "Landing para profesor de francés con formulario integrado a WhatsApp.",
+    tech: ["HTML", "CSS", "JS", "Node.js"],
+    image: "/images/proyecto-frances.png",
+    demo: "https://frenchclassdemo.netlify.app/",
+  },
+];
+---
+
+<section id="proyectos" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        Proyectos <span class="bg-linear-to-r from-primary to-purple-500 bg-clip-text text-transparent">destacados</span>
+      </h2>
+      <p class="text-gray-400 max-w-xl mx-auto">
+        Trabajos reales para clientes y proyectos personales
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {projects.map((project) => (
+        <div
+          class={`rounded-xl border border-neutral-800 overflow-hidden group transition-all hover:border-primary/40 ${
+            project.featured ? "md:col-span-2" : ""
+          }`}
+        >
+          <div class={project.featured ? "md:flex" : ""}>
+            
+            <!-- Image -->
+            <div class={`overflow-hidden ${project.featured ? "md:w-3/5" : "w-full"}`}>
+              <img
+                src={project.image}
+                alt={project.title}
+                class="w-full h-48 md:h-64 object-cover object-top transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+
+            <!-- Content -->
+            <div class={`p-6 ${project.featured ? "md:w-2/5 flex flex-col justify-center" : ""}`}>
+              
+              <div class="flex items-center gap-3 mb-2">
+                <h3 class="text-xl font-semibold text-white">
+                  {project.title}
+                </h3>
+                <span class="text-xs text-gray-400 border border-neutral-700 rounded-full px-2.5 py-0.5">
+                  {project.year}
+                </span>
+              </div>
+
+              <p class="text-sm text-gray-400 mb-4 leading-relaxed">
+                {project.description}
+              </p>
+
+              <!-- Tech tags -->
+              <div class="flex flex-wrap gap-2 mb-4">
+                {project.tech.map((t) => (
+                  <span class="text-xs bg-neutral-800 text-gray-300 px-2.5 py-1 rounded-md">
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              <!-- Links -->
+              <div class="flex gap-4 text-sm">
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-primary hover:underline"
+                  >
+                    Demo →
+                  </a>
+                )}
+                {project.code && (
+                  <a
+                    href={project.code}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Código →
+                  </a>
+                )}
+              </div>
+
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

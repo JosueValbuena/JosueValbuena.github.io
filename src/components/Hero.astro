@@ -1,0 +1,58 @@
+---
+import { Github, Linkedin, Mail } from "@lucide/astro";
+import { Image } from "astro:assets";
+---
+
+<section class="min-h-screen flex items-center justify-center px-6 relative overflow-hidden pt-16">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 rounded-full bg-primary/5 blur-[120px] pointer-events-none"></div>
+
+  <div class="container max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16 relative z-10">
+    <div class="flex-1 text-center md:text-left animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 ease-out">
+      <p class="text-muted-foreground text-lg mb-2 font-body">¡Hola! Soy</p>
+      <h1 class="text-5xl md:text-7xl font-bold font-heading mb-2">
+        Josué <span class="text-gradient">Valbuena</span>
+      </h1>
+      <h2 class="text-xl md:text-2xl text-muted-foreground font-heading mb-6">
+        Desarrollador Web Full-Stack
+      </h2>
+      <p class="text-secondary-foreground/80 max-w-lg mx-auto md:mx-0 mb-8 leading-relaxed">
+        Creo experiencias web modernas, accesibles y escalables. Especializado en React, TypeScript y Node.js.
+      </p>
+
+      <div class="flex gap-4 justify-center md:justify-start mb-8">
+        <a href="#proyectos" class="px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover-glow transition-all hover:scale-105">
+          Ver Proyectos
+        </a>
+        <a href="#contacto" class="px-6 py-3 rounded-lg border border-border text-foreground font-medium hover:border-primary/50 transition-all">
+          Contáctame
+        </a>
+      </div>
+
+      <div class="flex gap-5 justify-center md:justify-start">
+        <a href="https://github.com/JosueValbuena" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-primary transition-colors">
+          <Github size={22} />
+        </a>
+        <a href="https://linkedin.com/in/josuevalbuena" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-primary transition-colors">
+          <Linkedin size={22} />
+        </a>
+        <a href="mailto:joshvlbn@gmail.com" class="text-muted-foreground hover:text-primary transition-colors">
+          <Mail size={22} />
+        </a>
+      </div>
+    </div>
+
+    <div class="shrink-0 animate-on-scroll opacity-0 scale-95 transition-all duration-700 delay-200 ease-out">
+      <div class="relative">
+        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-primary/30 glow-border bg-muted">
+          <Image 
+          src="/images/profile.jpeg" 
+          alt="Josué Valbuena Huerta" 
+          class="w-full h-full object-cover"
+          width={500}
+          height={500}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
