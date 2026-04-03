@@ -1,19 +1,59 @@
 ---
-/* import proyectoMaxagua from "@/assets/proyecto-maxagua.png";
-import proyectoBeflatmatesApp from "@/assets/proyecto-beflatmates-app.png";
-import proyectoRepricer from "@/assets/proyecto-repricer.png";
-import proyectoFrances from "@/assets/proyecto-frances.png";
-import proyectoDearpaoo from "@/assets/proyecto-dearpaoo.png";
-import proyectoHospital from "@/assets/proyecto-hospital.png"; */
 
 const projects = [
+{
+    title: "Dearpaoo E-commerce",
+    year: "2026",
+    description:
+      "Tienda en linea fullstack con panel administrativo para gestión de productos y un blog.",
+    tech: ["TypeScript", "Next.js", "Prisma", "PostgreSQL"],
+    image: "/images/proyecto-dearpaoo.webp",
+    demo: "https://www.dearpaoo.com/",
+    code: "",
+  },  
+  {
+    title: "BeFlatMates",
+    year: "2025",
+    description:
+      "Herramienta para encontrar roomies en Santiago. Full-stack con diseño responsivo y Mobile First.",
+    tech: ["React", "TypeScript", "Node.js", "Express"],
+    image: "/images/proyecto-beflatmates-app.webp",
+    demo: "https://beflatmates.cl/",
+  },
+  {
+    title: "BeFlatMates - Landing",
+    year: "2025",
+    description:
+      "Landing de Beflatmates.cl. Herramienta para encontrar roomies en Santiago. Full-stack con diseño responsivo y Mobile First.",
+    tech: ["React", "TypeScript", "Node.js", "Express"],
+    image: "/images/proyecto-beflatmates-landing.webp",
+    demo: "https://beflatmates.cl/",
+  },
+  {
+    title: "Hogarplus",
+    year: "2026",
+    description:
+      "Sitio web enfocado a inmobiliarias. incluye panel adminsitrativo para gestión de corredores y propiedades.",
+    tech: ["TypeScript", "NextJS", "PrismaORM"],
+    image: "/images/proyecto-hogarplus.webp",
+    demo: "https://hogarplus.vercel.app/",
+  },
+  {
+    title: "Hospital Clínico del Valle",
+    year: "2026",
+    description:
+      "Landing institucional para hospital clínico con servicios médicos e información de contacto.",
+    tech: ["HTML", "CSS", "JavaScript", "Node.js"],
+    image: "/images/proyecto-hospital.webp",
+    demo: "https://hospitalclinicodelvalle.netlify.app/",
+  },
   {
     title: "Price Optimizer Pro",
     year: "2025",
     description:
       "Dashboard para gestión de inventario en Amazon/eBay. Arquitectura Atomic Design con métricas de precios y ventas.",
     tech: ["React", "TypeScript", "Shadcn/UI", "Tailwind"],
-    image: "/images/proyecto-repricer-app.png",
+    image: "/images/proyecto-repricer-app.webp",
     demo: "https://upwork-first-project.netlify.app/",
     featured: false,
   },
@@ -23,46 +63,9 @@ const projects = [
     description:
       "Landing para Price Optimizer Pro. Dashboard para gestión de inventario en Amazon/eBay. Arquitectura Atomic Design con métricas de precios y ventas.",
     tech: ["React", "TypeScript", "Shadcn/UI", "Tailwind"],
-    image: "/images/proyecto-repricer-lading.png",
+    image: "/images/proyecto-repricer-lading.webp",
     demo: "https://upwork-first-project.netlify.app/",
     featured: false,
-  },
-  {
-    title: "Dearpaoo E-commerce",
-    year: "2026",
-    description:
-      "E-commerce fullstack con panel administrativo para gestión de módulos completos.",
-    tech: ["TypeScript", "Next.js", "Prisma", "PostgreSQL"],
-    image: "/images/proyecto-dearpaoo.png",
-    demo: "https://www.dearpaoo.com/",
-    code: "https://github.com/JosueValbuena/CoderHouse-BackEnd-FrontEnd",
-  },
-  {
-    title: "BeFlatMates",
-    year: "2025",
-    description:
-      "Herramienta para encontrar roomies en Santiago. Full-stack con diseño responsivo y Mobile First.",
-    tech: ["React", "TypeScript", "Node.js", "Express"],
-    image: "/images/proyecto-beflatmates-app.png",
-    demo: "https://beflatmates.cl/",
-  },
-  {
-    title: "BeFlatMates - Landing",
-    year: "2025",
-    description:
-      "Landing de Beflatmates.cl. Herramienta para encontrar roomies en Santiago. Full-stack con diseño responsivo y Mobile First.",
-    tech: ["React", "TypeScript", "Node.js", "Express"],
-    image: "/images/proyecto-beflatmates-landing.png",
-    demo: "https://beflatmates.cl/",
-  },
-  {
-    title: "Hospital Clínico del Valle",
-    year: "2026",
-    description:
-      "Landing institucional para hospital clínico con servicios médicos e información de contacto.",
-    tech: ["HTML", "CSS", "JavaScript", "Node.js"],
-    image: "/images/proyecto-hospital.png",
-    demo: "https://hospitalclinicodelvalle.netlify.app/",
   },
   {
     title: "Landing MAXagua",
@@ -70,7 +73,7 @@ const projects = [
     description:
       "Landing page corporativa con Responsive Design para empresa de servicios.",
     tech: ["HTML", "CSS", "JavaScript"],
-    image: "/images/proyecto-maxagua.png",
+    image: "/images/proyecto-maxagua.webp",
     demo: "https://maxagua-demo.netlify.app/",
   },
   {
@@ -79,7 +82,7 @@ const projects = [
     description:
       "Landing para profesor de francés con formulario integrado a WhatsApp.",
     tech: ["HTML", "CSS", "JS", "Node.js"],
-    image: "/images/proyecto-frances.png",
+    image: "/images/proyecto-frances.webp",
     demo: "https://frenchclassdemo.netlify.app/",
   },
 ];
@@ -148,6 +151,7 @@ const projects = [
                   <a
                     href={project.demo}
                     target="_blank"
+                    aria-label={`Ver demo del proyecto ${project.title}`}
                     rel="noopener noreferrer"
                     class="text-primary hover:underline"
                   >
@@ -159,6 +163,7 @@ const projects = [
                     href={project.code}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Ver código del proyecto ${project.title}`}
                     class="text-gray-400 hover:text-white transition-colors"
                   >
                     Código →

@@ -13,12 +13,68 @@ import Contact from "../components/Contact.astro";
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Josué Valbuena | Desarrollador Full-Stack</title>
+
+    <title>Josué Valbuena | Desarrollador Web Full-Stack</title>
+    <meta
+      name="description"
+      content="Soy Josué Valbuena, Desarrollador Web Full-Stack freelance en Santiago, Chile. Especialista en React, Node.js y TypeScript. Creo sitios web, e-commerce y web apps a medida."
+    />
+
+    <meta
+      name="keywords"
+      content="Desarrollador Web, Full-Stack, Frontend, Backend, Freelance, React, Node.js, TypeScript, Next.js, creador de sitios web, e-commerce, Santiago, Chile, Josué Valbuena"
+    />
+
+    <meta name="author" content="Josué Valbuena" />
+    <link rel="canonical" href="https://josuevalbuena.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://josuevalbuena.com/" />
+    <meta
+      property="og:title"
+      content="Josué Valbuena | Desarrollador Web Full-Stack"
+    />
+    <meta
+      property="og:description"
+      content="Especialista en React, Node.js y TypeScript. Mira mi portafolio de proyectos y trabajemos juntos."
+    />
+    <meta
+      property="og:image"
+      content="https://josuevalbuena.com/images/profile.webp"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="josuevalbuena.com" />
+    <meta property="twitter:url" content="https://josuevalbuena.com/" />
+    <meta
+      name="twitter:title"
+      content="Josué Valbuena | Desarrollador Web Full-Stack"
+    />
+    <meta
+      name="twitter:description"
+      content="Especialista en React, Node.js y TypeScript. Mira mi portafolio de proyectos y trabajemos juntos."
+    />
+    <meta
+      name="twitter:image"
+      content="https://josuevalbuena.com/images/profile.webp"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body class="min-h-screen bg-background">
     <Navbar />
     <FloatingButtons />
-    
+
     <main>
       <Hero />
       <Services />
@@ -26,24 +82,33 @@ import Contact from "../components/Contact.astro";
       <Experience />
       <Contact />
     </main>
-    
-    <footer class="py-8 text-center text-sm text-muted-foreground border-t border-border">
+
+    <footer
+      class="py-8 text-center text-sm text-muted-foreground border-t border-border"
+    >
       <p>© 2026 Josué Valbuena. Todos los derechos reservados.</p>
     </footer>
 
     <script>
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('opacity-100', 'translate-y-0');
-            entry.target.classList.remove('opacity-0', 'translate-y-8', 'scale-95');
-            observer.unobserve(entry.target); // Solo anima una vez
-          }
-        });
-      }, { threshold: 0.1 });
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("opacity-100", "translate-y-0");
+              entry.target.classList.remove(
+                "opacity-0",
+                "translate-y-8",
+                "scale-95",
+              );
+              observer.unobserve(entry.target); // Solo anima una vez
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
 
       // Observar todos los elementos con la clase 'animate-on-scroll'
-      document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+      document.querySelectorAll(".animate-on-scroll").forEach((el) => {
         observer.observe(el);
       });
     </script>
