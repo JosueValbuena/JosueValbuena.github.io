@@ -1,24 +1,66 @@
 ---
+import { Image } from "astro:assets";
+import { flags, countryNames } from "../lib/flags";
+
+const projectImages = import.meta.glob<{ default: ImageMetadata }>(
+  "../assets/projects/*.webp",
+  { eager: true },
+);
 
 const projects = [
-{
-    title: "Dearpaoo E-commerce - Web App - Fullstack",
+  {
+    title: "RedBrokers - Landing",
     year: "2026",
     description:
-      "Tienda en linea fullstack con panel administrativo para gestión de productos y un blog.",
-    tech: ["TypeScript", "Next.js", "Prisma", "PostgreSQL"],
-    image: "/images/proyecto-dearpaoo.webp",
-    demo: "https://www.dearpaoo.com/",
+      "Landing page informativo para una web app de canje inmobiliario entre corredores de propiedades.",
+    tech: ["Astro", "TailwindCSS", "Typescript"],
+    image: "proyecto-redbrokers-landing.webp",
+    demo: "https://www.redbrokers.cl/",
     code: "",
-  },  
+    country: "chile",
+  },
+  {
+    title: "RedBrokers - Web App - Fullstack",
+    year: "2026",
+    description:
+      "Aplicación web enfocada al canje inmobiliario entre corredores de propiedades.",
+    tech: ["TypeScript", "ReactJS", "ExpressJS", "Prisma", "PostgreSQL"],
+    image: "proyecto-redbrokers-app.webp",
+    demo: "https://app.redbrokers.cl/",
+    code: "",
+    country: "chile",
+  },
+  {
+    title: "RedBrokers Catálogo - Web App - Fullstack",
+    year: "2026",
+    description:
+      "Aplicación web enfocada al público como un catálogo digital de propiedades disponibles.",
+    tech: ["TypeScript", "Next.js"],
+    image: "proyecto-redbrokers-catalogo.webp",
+    demo: "https://catalogo.redbrokers.cl/",
+    code: "",
+    country: "chile",
+  },
+  {
+    title: "Maremonte Propiedades - Web App - Fullstack",
+    year: "2026",
+    description:
+      "Sitio web para una inmobiliaria. Incluye un panel administrativo para gestión de propiedades",
+    tech: ["TypeScript", "Next.js", "Prisma", "PostgreSQL"],
+    image: "proyecto-maremonte.webp",
+    demo: "https://redbrokers-client-maremonte-propied.vercel.app/",
+    code: "",
+    country: "chile",
+  },
   {
     title: "BeFlatMates - Web App - Fullstack",
     year: "2025",
     description:
       "Herramienta para encontrar roomies en Santiago. Full-stack con diseño responsivo y Mobile First.",
     tech: ["React", "TypeScript", "Node.js", "Express"],
-    image: "/images/proyecto-beflatmates-app.webp",
+    image: "proyecto-beflatmates-app.webp",
     demo: "https://beflatmates.cl/",
+    country: "chile",
   },
   {
     title: "BeFlatMates - Landing",
@@ -26,8 +68,20 @@ const projects = [
     description:
       "Landing de Beflatmates.cl. Herramienta para encontrar roomies en Santiago. Full-stack con diseño responsivo y Mobile First.",
     tech: ["React", "TypeScript", "Node.js", "Express"],
-    image: "/images/proyecto-beflatmates-landing.webp",
+    image: "proyecto-beflatmates-landing.webp",
     demo: "https://beflatmates.com/",
+    country: "chile",
+  },
+  {
+    title: "Dearpaoo E-commerce - Web App - Fullstack",
+    year: "2026",
+    description:
+      "Tienda en linea fullstack con panel administrativo para gestión de productos y un blog.",
+    tech: ["TypeScript", "Next.js", "Prisma", "PostgreSQL"],
+    image: "proyecto-dearpaoo.webp",
+    demo: "https://www.dearpaoo.com/",
+    code: "",
+    country: "chile",
   },
   {
     title: "Hogarplus - Web App - Fullstack",
@@ -35,8 +89,9 @@ const projects = [
     description:
       "Sitio web enfocado a inmobiliarias. incluye panel adminsitrativo para gestión de corredores y propiedades.",
     tech: ["TypeScript", "NextJS", "PrismaORM"],
-    image: "/images/proyecto-hogarplus.webp",
+    image: "proyecto-hogarplus.webp",
     demo: "https://hogarplus.vercel.app/",
+    country: "chile",
   },
   {
     title: "Hospital Clínico del Valle - Landing",
@@ -44,8 +99,9 @@ const projects = [
     description:
       "Landing institucional para hospital clínico con servicios médicos e información de contacto.",
     tech: ["HTML", "CSS", "JavaScript", "Astro"],
-    image: "/images/proyecto-hospital.webp",
+    image: "proyecto-hospital.webp",
     demo: "https://hospitalclinicodelvalle.netlify.app/",
+    country: "venezuela",
   },
   {
     title: "QBO Asesorias - Landing",
@@ -53,8 +109,9 @@ const projects = [
     description:
       "Landing para una agencia de asesoría tributaria en España.",
     tech: ["HTML", "CSS", "JS", "Astro"],
-    image: "/images/proyecto-qboasesorias.webp",
+    image: "proyecto-qboasesorias.webp",
     demo: "https://asesoriaqbo.es/",
+    country: "espana",
   },
   {
     title: "Price Optimizer Pro - web App - Frontend",
@@ -62,9 +119,10 @@ const projects = [
     description:
       "Dashboard para gestión de inventario en Amazon/eBay. Arquitectura Atomic Design con métricas de precios y ventas.",
     tech: ["React", "TypeScript", "Shadcn/UI", "Tailwind"],
-    image: "/images/proyecto-repricer-app.webp",
+    image: "proyecto-repricer-app.webp",
     demo: "https://upwork-first-project.netlify.app/",
     featured: false,
+    country: "usa",
   },
   {
     title: "Price Optimizer Pro - Landing",
@@ -72,9 +130,10 @@ const projects = [
     description:
       "Landing para Price Optimizer Pro. Dashboard para gestión de inventario en Amazon/eBay. Arquitectura Atomic Design con métricas de precios y ventas.",
     tech: ["HTML", "CSS", "Tailwind", "JavaScript"],
-    image: "/images/proyecto-repricer-lading.webp",
+    image: "proyecto-repricer-lading.webp",
     demo: "https://upwork-first-landing-demo.netlify.app/",
     featured: false,
+    country: "usa",
   },
   {
     title: "Fiberglass Replicas - Landing",
@@ -82,8 +141,9 @@ const projects = [
     description:
       "Landing page para empresa de replicas de autos de Formula 1 en fibra de vidrio.",
     tech: ["HTML", "CSS", "JavaScript", "Astro"],
-    image: "/images/proyecto-fiberglassReplicas-landing.webp",
+    image: "proyecto-fiberglassReplicas-landing.webp",
     demo: "https://gngnewtech.com/fiberglass_replicas/index.html",
+    country: "usa",
   },
   {
     title: "Francés con Esteban - Landing",
@@ -91,8 +151,9 @@ const projects = [
     description:
       "Landing para profesor de francés con formulario integrado a WhatsApp.",
     tech: ["HTML", "CSS", "JS", "Node.js", "Express", "MongoDB"],
-    image: "/images/proyecto-frances.webp",
+    image: "proyecto-frances.webp",
     demo: "https://frenchclassdemo.netlify.app/",
+    country: "francia",
   },
   {
     title: "MAXagua - Landing",
@@ -100,15 +161,16 @@ const projects = [
     description:
       "Landing page corporativa con Responsive Design para empresa de servicios.",
     tech: ["HTML", "CSS", "JavaScript"],
-    image: "/images/proyecto-maxagua.webp",
+    image: "proyecto-maxagua.webp",
     demo: "https://maxagua-demo.netlify.app/",
+    country: "chile",
   },
 ];
 ---
-
+ 
 <section id="proyectos" class="py-24 px-6">
   <div class="max-w-6xl mx-auto">
-    
+ 
     <!-- Header -->
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-bold mb-4">
@@ -118,7 +180,7 @@ const projects = [
         Trabajos reales para clientes y proyectos personales
       </p>
     </div>
-
+ 
     <!-- Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {projects.map((project) => (
@@ -128,32 +190,42 @@ const projects = [
           }`}
         >
           <div class={project.featured ? "md:flex" : ""}>
-            
+ 
             <!-- Image -->
             <div class={`overflow-hidden ${project.featured ? "md:w-3/5" : "w-full"}`}>
-              <img
-                src={project.image}
+              <Image
+                src={projectImages[`../assets/projects/${project.image}`].default}
                 alt={project.title}
+                widths={[400, 800]}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 class="w-full h-48 md:h-64 object-cover object-top transition-transform duration-500 group-hover:scale-105"
               />
             </div>
-
+ 
             <!-- Content -->
             <div class={`p-6 ${project.featured ? "md:w-2/5 flex flex-col justify-center" : ""}`}>
-              
-              <div class="flex items-center gap-3 mb-2">
-                <h3 class="text-xl font-semibold text-white">
-                  {project.title}
-                </h3>
+ 
+              <!-- Bandera + año, alineados a la derecha, entre la imagen y el título -->
+              <div class="flex items-center justify-end gap-2">
+                <span
+                  class="w-5 h-3.5 rounded-sm overflow-hidden border border-neutral-700 shrink-0"
+                  title={countryNames[project.country]}
+                  aria-label={countryNames[project.country]}
+                  set:html={flags[project.country]}
+                />
                 <span class="text-xs text-gray-400 border border-neutral-700 rounded-full px-2.5 py-0.5">
                   {project.year}
                 </span>
               </div>
-
+ 
+              <h3 class="text-xl font-semibold text-white mb-2">
+                {project.title}
+              </h3>
+ 
               <p class="text-sm text-gray-400 mb-4 leading-relaxed">
                 {project.description}
               </p>
-
+ 
               <!-- Tech tags -->
               <div class="flex flex-wrap gap-2 mb-4">
                 {project.tech.map((t) => (
@@ -162,7 +234,7 @@ const projects = [
                   </span>
                 ))}
               </div>
-
+ 
               <!-- Links -->
               <div class="flex gap-4 text-sm">
                 {project.demo && (
@@ -188,12 +260,12 @@ const projects = [
                   </a>
                 )}
               </div>
-
+ 
             </div>
           </div>
         </div>
       ))}
     </div>
-
+ 
   </div>
 </section>

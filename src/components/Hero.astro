@@ -1,6 +1,10 @@
 ---
 import { Github, Linkedin, Mail } from "@lucide/astro";
 import { Image } from "astro:assets";
+import profile from "../assets/profile.webp";
+import { flags, countryNames } from "../lib/flags";
+
+const clientCountries = ["chile", "usa", "venezuela", "espana", "francia"];
 ---
 
 <section
@@ -30,6 +34,26 @@ import { Image } from "astro:assets";
         Creo experiencias web modernas, accesibles y escalables. Especializado
         en React, TypeScript y Node.js.
       </p>
+
+      <div
+        class="flex items-center gap-3 justify-center md:justify-start mb-8"
+      >
+        <p class="text-sm text-secondary-foreground/80">
+          He trabajado con 10 clientes en 5 países.
+        </p>
+        <div class="flex gap-1.5">
+          {
+            clientCountries.map((country) => (
+              <span
+                class="w-5 h-3.5 rounded-sm overflow-hidden border border-neutral-700 shrink-0"
+                title={countryNames[country]}
+                aria-label={countryNames[country]}
+                set:html={flags[country]}
+              />
+            ))
+          }
+        </div>
+      </div>
 
       <div class="flex gap-4 justify-center md:justify-start mb-8">
         <a
@@ -83,11 +107,13 @@ import { Image } from "astro:assets";
           class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-primary/30 glow-border bg-muted"
         >
           <Image
-            src="/images/profile.webp"
+            src={profile}
             alt="Josué Valbuena Huerta"
             class="w-full h-full object-cover"
-            width={500}
-            height={500}
+            widths={[320, 640]}
+            sizes="(min-width: 768px) 320px, 256px"
+            loading="eager"
+            fetchpriority="high"
           />
         </div>
       </div>
