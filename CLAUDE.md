@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Personal portfolio site for Josué Valbuena (full-stack developer), built with Astro 5 + Tailwind CSS 4, deployed as a static site at josuevalbuena.com (GitHub Pages). Content is in Spanish.
+Personal portfolio site for Josué Valbuena (full-stack developer), built with Astro 7 + Tailwind CSS 4, deployed as a static site at josuevalbuena.com (GitHub Pages). Content is in Spanish.
 
 ## Commands
 

@@ -1,0 +1,73 @@
+---
+import { MessagesSquare, FileText, Code2, Rocket } from "@lucide/astro";
+
+const steps = [
+  {
+    icon: MessagesSquare,
+    title: "Conversamos",
+    description:
+      "Me cuentas tu idea y tus objetivos. Resuelvo tus dudas y definimos qué necesitas realmente.",
+  },
+  {
+    icon: FileText,
+    title: "Propuesta clara",
+    description:
+      "Recibes una propuesta con el alcance, el precio y el plazo de entrega, sin sorpresas.",
+  },
+  {
+    icon: Code2,
+    title: "Desarrollo con avances",
+    description:
+      "Construyo tu proyecto y te muestro los avances para que opines y ajustemos en el camino.",
+  },
+  {
+    icon: Rocket,
+    title: "Lanzamiento y soporte",
+    description:
+      "Publicamos tu proyecto y sigo disponible para resolver dudas y hacer ajustes después.",
+  },
+];
+---
+
+<section id="proceso" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        Cómo <span class="text-gradient">trabajo</span>
+      </h2>
+      <p class="text-muted-foreground max-w-xl mx-auto">
+        Un proceso simple, de tu idea a un proyecto funcionando
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <ol class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      {
+        steps.map((step, index) => {
+          const Icon = step.icon;
+
+          return (
+            <li class="card-gradient rounded-xl p-6 border border-border hover:border-primary/30 hover-glow transition-all relative">
+              <span class="absolute top-4 right-5 text-4xl font-bold font-heading text-primary/15">
+                {index + 1}
+              </span>
+
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 border border-primary/25 bg-primary/10">
+                <Icon size={24} class="text-primary" />
+              </div>
+
+              <h3 class="text-lg font-semibold mb-2 text-foreground">
+                {step.title}
+              </h3>
+
+              <p class="text-sm text-secondary-foreground/80 leading-relaxed">
+                {step.description}
+              </p>
+            </li>
+          );
+        })
+      }
+    </ol>
+  </div>
+</section>

@@ -2,59 +2,93 @@
 import {
   Monitor,
   ShoppingCart,
-  Smartphone,
-  Code2,
-  Database,
-  Layout,
+  LayoutDashboard,
   Bot,
+  Workflow,
+  RefreshCw,
 } from "@lucide/astro";
 
 const services = [
   {
     icon: Monitor,
-    title: "Sitios Web",
+    title: "Sitio web profesional",
+    href: "/servicios/desarrollo-web/",
     color: "hsl(160 84% 39%)",
-    items: ["Landing Pages", "Portafolios", "Responsive Design", "SEO", "Performance"],
+    description:
+      "Una web que presenta tu negocio y te trae clientes desde Google.",
+    items: [
+      "Diseño responsivo, pensado primero para el celular",
+      "Optimizado para SEO y carga rápida",
+      "Formularios y botón de WhatsApp",
+      "Landing pages y sitios corporativos",
+    ],
   },
   {
     icon: ShoppingCart,
-    title: "E-Commerce",
+    title: "Tienda online",
+    href: "/servicios/tienda-online/",
     color: "hsl(200 80% 55%)",
-    items: ["Tiendas online", "Catálogos", "Pasarelas de pago", "Admin panels"],
+    description:
+      "Vende tus productos las 24 horas, con tu propio panel de control.",
+    items: [
+      "Catálogo y carrito de compras",
+      "Pasarelas de pago",
+      "Panel para gestionar productos y pedidos",
+      "Blog para atraer más visitas",
+    ],
   },
   {
-    icon: Code2,
-    title: "Front-End",
+    icon: LayoutDashboard,
+    title: "Sistema o aplicación a medida",
+    href: "/servicios/aplicaciones-a-medida/",
     color: "hsl(280 70% 60%)",
-    items: ["React", "TypeScript", "Tailwind CSS", "Material UI", "Shadcn/UI"],
-  },
-  {
-    icon: Database,
-    title: "Back-End",
-    color: "hsl(30 80% 55%)",
-    items: ["Node.js", "Express", "PostgreSQL", "Prisma ORM", "REST APIs"],
-  },
-  {
-    icon: Layout,
-    title: "UI/UX",
-    color: "hsl(340 70% 55%)",
-    items: ["Figma a código", "Mobile First", "Atomic Design", "Clean Code"],
-  },
-  {
-    icon: Smartphone,
-    title: "Web Apps",
-    color: "hsl(50 80% 50%)",
-    items: ["SPAs", "Dashboards", "CRUD completos", "Auth & permisos"],
+    description: "Software hecho para cómo funciona tu negocio, no al revés.",
+    items: [
+      "Paneles administrativos y dashboards",
+      "Inicio de sesión, roles y permisos",
+      "Gestión de datos y reportes",
+      "Integración con otras plataformas y APIs",
+    ],
   },
   {
     icon: Bot,
-    title: "IA & Automatizaciones",
+    title: "Chatbots y agentes de IA",
+    href: "/servicios/chatbots-ia/",
     color: "hsl(190 80% 55%)",
+    description:
+      "Atiende a tus clientes y resuelve consultas sin que tengas que estar siempre disponible.",
     items: [
-      "Chatbots para tu web",
-      "Automatización de procesos",
-      "Integración de APIs",
-      "OpenAI, Gemini y Claude",
+      "Chatbots para tu web y WhatsApp",
+      "Agentes que responden con la información de tu negocio",
+      "Integración con OpenAI, Gemini y Claude",
+      "Derivación a una persona cuando hace falta",
+    ],
+  },
+  {
+    icon: Workflow,
+    title: "Automatización de procesos",
+    href: "/servicios/automatizacion/",
+    color: "hsl(30 80% 55%)",
+    description: "Ahorra horas de trabajo repetitivo y reduce errores.",
+    items: [
+      "Conexión entre tus herramientas y sistemas",
+      "Envío automático de correos y notificaciones",
+      "Procesamiento de formularios y documentos",
+      "Reportes generados automáticamente",
+    ],
+  },
+  {
+    icon: RefreshCw,
+    title: "Mejora o rediseño de tu sitio",
+    href: "/servicios/rediseno-web/",
+    color: "hsl(340 70% 55%)",
+    description:
+      "¿Ya tienes una web que es lenta, antigua o no te trae resultados?",
+    items: [
+      "Rediseño moderno y adaptado al celular",
+      "Mejora de velocidad y posicionamiento",
+      "Migración a una tecnología actual",
+      "Corrección de errores y mantenimiento",
     ],
   },
 ];
@@ -66,10 +100,10 @@ const services = [
     <!-- Header -->
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-bold mb-4">
-        Lo que <span class="text-gradient">puedo hacer</span>
+        Lo que puedo hacer <span class="text-gradient">por tu negocio</span>
       </h2>
       <p class="text-muted-foreground max-w-xl mx-auto">
-        Soluciones digitales completas para llevar tu proyecto al siguiente nivel
+        Cuéntame qué necesitas y lo convierto en una solución web que funcione
       </p>
     </div>
 
@@ -88,9 +122,13 @@ const services = [
               <Icon size={24} style={`color: ${service.color};`} />
             </div>
 
-            <h3 class="text-lg font-semibold mb-3 text-foreground">
+            <h3 class="text-lg font-semibold mb-2 text-foreground">
               {service.title}
             </h3>
+
+            <p class="text-sm text-secondary-foreground/80 mb-4 leading-relaxed">
+              {service.description}
+            </p>
 
             <ul class="space-y-1.5">
               {service.items.map((item) => (
@@ -104,9 +142,25 @@ const services = [
               ))}
             </ul>
 
+            {service.href && (
+              <a
+                href={service.href}
+                class="inline-block mt-5 text-sm text-primary hover:underline"
+                aria-label={`Más información sobre ${service.title}`}
+              >
+                Ver más →
+              </a>
+            )}
+
           </div>
         );
       })}
+    </div>
+
+    <div class="text-center mt-10">
+      <a href="/servicios/" class="text-primary hover:underline">
+        Ver todos los servicios →
+      </a>
     </div>
 
   </div>

@@ -1,11 +1,18 @@
 ---
-import { Menu, X } from "@lucide/astro";
+import { ChevronDown, Menu, X } from "@lucide/astro";
+import { servicePages } from "../data/servicePages";
+
+const serviceLinks = servicePages.map((page) => ({
+  label: page.navLabel,
+  href: `/servicios/${page.slug}/`,
+}));
 
 const navLinks = [
-  { label: "Servicios", href: "#servicios" },
-  { label: "Proyectos", href: "#proyectos" },
-  { label: "Experiencia", href: "#experiencia" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Servicios", href: "/servicios/", children: serviceLinks },
+  { label: "Proyectos", href: "/#proyectos" },
+  { label: "Proceso", href: "/#proceso" },
+  { label: "Experiencia", href: "/#experiencia" },
+  { label: "Contacto", href: "/#contacto" },
 ];
 ---
 
@@ -25,15 +32,44 @@ const navLinks = [
 
     <div class="hidden md:flex items-center gap-8">
       {
-        navLinks.map((link) => (
-          <a
-            href={link.href}
-            class="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            aria-label={`Ir a ${link.label}`}
-          >
-            {link.label}
-          </a>
-        ))
+        navLinks.map((link) =>
+          link.children ? (
+            <div class="relative group">
+              <a
+                href={link.href}
+                class="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                aria-label={`Ir a ${link.label}`}
+                aria-haspopup="true"
+              >
+                {link.label}
+                <ChevronDown
+                  size={14}
+                  class="transition-transform group-hover:rotate-180 group-focus-within:rotate-180"
+                />
+              </a>
+              <div class="absolute left-1/2 -translate-x-1/2 top-full pt-4 hidden group-hover:block group-focus-within:block">
+                <div class="min-w-52 rounded-lg border border-border bg-background p-2 shadow-lg">
+                  {link.children.map((child) => (
+                    <a
+                      href={child.href}
+                      class="block rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
+                    >
+                      {child.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <a
+              href={link.href}
+              class="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              aria-label={`Ir a ${link.label}`}
+            >
+              {link.label}
+            </a>
+          ),
+        )
       }
     </div>
 
@@ -53,13 +89,23 @@ const navLinks = [
   >
     {
       navLinks.map((link) => (
-        <a
-          href={link.href}
-          class="mobile-link block text-sm text-muted-foreground hover:text-foreground transition-colors"
-          aria-label={`Ir a ${link.label}`}
-        >
-          {link.label}
-        </a>
+        <>
+          <a
+            href={link.href}
+            class="mobile-link block text-sm text-muted-foreground hover:text-foreground transition-colors"
+            aria-label={`Ir a ${link.label}`}
+          >
+            {link.label}
+          </a>
+          {link.children?.map((child) => (
+            <a
+              href={child.href}
+              class="mobile-link block pl-4 text-sm text-muted-foreground/80 hover:text-foreground transition-colors"
+            >
+              — {child.label}
+            </a>
+          ))}
+        </>
       ))
     }
   </div>

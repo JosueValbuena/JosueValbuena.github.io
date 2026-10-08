@@ -1,0 +1,108 @@
+---
+import {
+  Monitor,
+  ShoppingCart,
+  LayoutDashboard,
+  Bot,
+  Workflow,
+  RefreshCw,
+} from "@lucide/astro";
+import Layout from "../../layouts/Layout.astro";
+import Process from "../../components/Process.astro";
+import Contact from "../../components/Contact.astro";
+import { servicePages } from "../../data/servicePages";
+import { siteUrl } from "../../lib/seo";
+
+const icons = {
+  "desarrollo-web": Monitor,
+  "tienda-online": ShoppingCart,
+  "aplicaciones-a-medida": LayoutDashboard,
+  "chatbots-ia": Bot,
+  automatizacion: Workflow,
+  "rediseno-web": RefreshCw,
+} as const;
+
+const url = `${siteUrl}/servicios/`;
+
+const jsonLd = [
+  {
+    "@type": "CollectionPage",
+    "@id": `${url}#page`,
+    url,
+    name: "Servicios de desarrollo web e IA",
+    isPartOf: { "@id": `${siteUrl}/#website` },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: servicePages.map((page, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: page.name,
+        url: `${siteUrl}/servicios/${page.slug}/`,
+      })),
+    },
+  },
+  {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Inicio", item: `${siteUrl}/` },
+      { "@type": "ListItem", position: 2, name: "Servicios", item: url },
+    ],
+  },
+];
+---
+
+<Layout
+  title="Servicios de desarrollo web e IA en Chile | Josué Valbuena"
+  description="Páginas web, tiendas online, software a medida, chatbots con IA, automatización de procesos y rediseño web en Chile. Elige el servicio que necesitas y cotiza."
+  path="/servicios/"
+  jsonLd={jsonLd}
+>
+  <section class="pt-32 pb-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <nav aria-label="Ruta de navegación" class="text-sm text-muted-foreground mb-6 text-center">
+        <a href="/" class="hover:text-foreground transition-colors">Inicio</a>
+        <span class="mx-2">/</span>
+        <span class="text-foreground">Servicios</span>
+      </nav>
+
+      <div class="text-center mb-14">
+        <h1 class="text-4xl md:text-6xl font-bold font-heading mb-6 leading-tight">
+          Servicios de desarrollo web e <span class="text-gradient">IA</span>
+        </h1>
+        <p class="text-lg text-secondary-foreground/80 max-w-2xl mx-auto leading-relaxed">
+          Desde una página web hasta un sistema a medida o un chatbot con IA.
+          Elige lo que necesitas o cuéntame tu idea y te oriento.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {
+          servicePages.map((page) => {
+            const Icon = icons[page.slug as keyof typeof icons];
+
+            return (
+              <a
+                href={`/servicios/${page.slug}/`}
+                class="card-gradient rounded-xl p-6 border border-border hover:border-primary/30 hover-glow transition-all flex flex-col"
+              >
+                <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 border border-primary/25 bg-primary/10">
+                  {Icon && <Icon size={24} class="text-primary" />}
+                </div>
+                <h2 class="text-lg font-semibold mb-2 text-foreground">
+                  {page.name}
+                </h2>
+                <p class="text-sm text-secondary-foreground/80 leading-relaxed mb-4">
+                  {page.intro}
+                </p>
+                <span class="mt-auto text-sm text-primary">Ver servicio →</span>
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+
+  <Process />
+  <Contact />
+</Layout>
