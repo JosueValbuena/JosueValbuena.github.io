@@ -9,5 +9,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: 'https://josuevalbuena.com',
-  integrations: [sitemap()],
+  integrations: [sitemap({ lastmod: new Date() })],
 });

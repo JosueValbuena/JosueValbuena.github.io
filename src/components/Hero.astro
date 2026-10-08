@@ -3,12 +3,16 @@ import { Github, Linkedin, Mail } from "@lucide/astro";
 import { Image } from "astro:assets";
 import profile from "../assets/profile.webp";
 import { flags, countryNames } from "../lib/flags";
+import { whatsappUrl } from "../lib/seo";
 
+const whatsappMessage =
+  "Hola Josué, vi tu web y quiero cotizar un proyecto. ¿Podemos hablar?";
+const whatsappLink = whatsappUrl(whatsappMessage);
 const clientCountries = ["chile", "usa", "venezuela", "espana", "francia"];
 ---
 
 <section
-  class="min-h-screen flex items-center justify-center px-6 relative overflow-hidden pt-16"
+  class="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden pt-16 pb-12 md:pb-36"
 >
   <div
     class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 rounded-full bg-primary/5 blur-[120px] pointer-events-none"
@@ -16,23 +20,24 @@ const clientCountries = ["chile", "usa", "venezuela", "espana", "francia"];
   </div>
 
   <div
-    class="container max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16 relative z-10"
+    class="container w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16 relative z-10"
   >
     <div
       class="flex-1 text-center md:text-left animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 ease-out"
     >
-      <p class="text-muted-foreground text-lg mb-2 font-body">¡Hola! Soy</p>
-      <h1 class="text-5xl md:text-7xl font-bold font-heading mb-2">
-        Josué <span class="text-gradient">Valbuena</span>
+      <p class="text-muted-foreground text-lg mb-3 font-body">
+        Hola, soy <span class="text-foreground font-medium">Josué Valbuena</span>
+      </p>
+      <h1 class="text-4xl md:text-6xl font-bold font-heading mb-6 leading-tight">
+        Desarrollador Web <span class="text-gradient whitespace-nowrap">Full-Stack e IA</span>{" "}
+        freelance en Chile
       </h1>
-      <h2 class="text-xl md:text-2xl text-muted-foreground font-heading mb-6">
-        Desarrollador Web Full-Stack
-      </h2>
       <p
         class="text-secondary-foreground/80 max-w-lg mx-auto md:mx-0 mb-8 leading-relaxed"
       >
-        Creo experiencias web modernas, accesibles y escalables. Especializado
-        en React, TypeScript y Node.js.
+        Desarrollo sitios web, tiendas online y aplicaciones a medida, e integro
+        chatbots y agentes de IA para que tu negocio venda y atienda mejor.
+        Trabajo directamente contigo, de la idea al lanzamiento.
       </p>
 
       <div
@@ -57,16 +62,18 @@ const clientCountries = ["chile", "usa", "venezuela", "espana", "francia"];
 
       <div class="flex gap-4 justify-center md:justify-start mb-8">
         <a
-          href="#proyectos"
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
           class="px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover-glow transition-all hover:scale-105"
         >
-          Ver Proyectos
+          Cotizar mi proyecto
         </a>
         <a
-          href="#contacto"
+          href="#proyectos"
           class="px-6 py-3 rounded-lg border border-border text-foreground font-medium hover:border-primary/50 transition-all"
         >
-          Contáctame
+          Ver proyectos
         </a>
       </div>
 
@@ -119,4 +126,46 @@ const clientCountries = ["chile", "usa", "venezuela", "espana", "francia"];
       </div>
     </div>
   </div>
+
+  <!-- Íconos decorativos: teléfono, laptop y monitor (siluetas sólidas), centrados al final del Hero -->
+  <svg
+    aria-hidden="true"
+    viewBox="0 0 860 360"
+    class="mt-12 w-52 md:mt-0 md:w-60 md:absolute md:bottom-54 md:left-1/2 md:-translate-x-1/2 pointer-events-none text-primary opacity-80"
+    fill="currentColor"
+  >
+    <!-- Teléfono -->
+    <g transform="translate(-480 32)">
+      <path
+        fill-rule="evenodd"
+        d="M508 108h64a18 18 0 0 1 18 18v164a18 18 0 0 1-18 18h-64a18 18 0 0 1-18-18V126a18 18 0 0 1 18-18ZM508 124a4 4 0 0 0-4 4v160a4 4 0 0 0 4 4h64a4 4 0 0 0 4-4V128a4 4 0 0 0-4-4ZM540 113.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"
+      />
+    </g>
+
+    <!-- Laptop -->
+    <g transform="translate(123 78.2) scale(0.85)">
+      <!-- Laptop: pantalla con bisel y cámara -->
+      <path
+        fill-rule="evenodd"
+        d="M77 12h306a14 14 0 0 1 14 14v190a14 14 0 0 1-14 14H77a14 14 0 0 1-14-14V26A14 14 0 0 1 77 12ZM85 31a3 3 0 0 0-3 3v173a3 3 0 0 0 3 3h290a3 3 0 0 0 3-3V34a3 3 0 0 0-3-3ZM230 17.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"
+      />
+      <!-- Laptop: base en perspectiva con hueco para el teclado -->
+      <path
+        fill-rule="evenodd"
+        d="M60 232h340l36 58a14 14 0 0 1-12 18H36a14 14 0 0 1-12-18ZM74 244l-40 54h392l-40-54Z"
+      />
+      <!-- Laptop: teclas y trackpad -->
+      <path d="M73.3 247h22.1v6h-22.1ZM97.6 247h22.1v6h-22.1ZM121.9 247h22.1v6h-22.1ZM146.2 247h22.1v6h-22.1ZM170.4 247h22.1v6h-22.1ZM194.7 247h22.1v6h-22.1ZM219.0 247h22.1v6h-22.1ZM243.2 247h22.1v6h-22.1ZM267.5 247h22.1v6h-22.1ZM291.8 247h22.1v6h-22.1ZM316.0 247h22.1v6h-22.1ZM340.3 247h22.1v6h-22.1ZM364.6 247h22.1v6h-22.1ZM67.4 255h23.0v6h-23.0ZM92.6 255h23.0v6h-23.0ZM117.8 255h23.0v6h-23.0ZM143.0 255h23.0v6h-23.0ZM168.1 255h23.0v6h-23.0ZM193.3 255h23.0v6h-23.0ZM218.5 255h23.0v6h-23.0ZM243.7 255h23.0v6h-23.0ZM268.9 255h23.0v6h-23.0ZM294.1 255h23.0v6h-23.0ZM319.2 255h23.0v6h-23.0ZM344.4 255h23.0v6h-23.0ZM369.6 255h23.0v6h-23.0ZM61.5 263h23.9v6h-23.9ZM87.6 263h23.9v6h-23.9ZM113.7 263h23.9v6h-23.9ZM139.8 263h23.9v6h-23.9ZM165.9 263h23.9v6h-23.9ZM192.0 263h23.9v6h-23.9ZM218.1 263h23.9v6h-23.9ZM244.1 263h23.9v6h-23.9ZM270.2 263h23.9v6h-23.9ZM296.3 263h23.9v6h-23.9ZM322.4 263h23.9v6h-23.9ZM348.5 263h23.9v6h-23.9ZM374.6 263h23.9v6h-23.9ZM55.6 271h24.8v6h-24.8ZM82.6 271h24.8v6h-24.8ZM109.6 271h24.8v6h-24.8ZM136.6 271h24.8v6h-24.8ZM163.6 271h24.8v6h-24.8ZM190.6 271h24.8v6h-24.8ZM217.6 271h24.8v6h-24.8ZM244.6 271h24.8v6h-24.8ZM271.6 271h24.8v6h-24.8ZM298.6 271h24.8v6h-24.8ZM325.6 271h24.8v6h-24.8ZM352.6 271h24.8v6h-24.8ZM379.6 271h24.8v6h-24.8Z" />
+      <rect x="160" y="281" width="140" height="13" rx="3" />
+    </g>
+
+    <!-- Monitor -->
+    <g transform="translate(463.75 -28.5) scale(0.55)">
+      <path
+        fill-rule="evenodd"
+        d="M137 128H664a22 22 0 0 1 22 22V534a22 22 0 0 1-22 22H137a22 22 0 0 1-22-22V150a22 22 0 0 1 22-22ZM172 185V441H629V185Z"
+      />
+      <path d="M343 556H458V615L514 642V670H286V642L343 615Z" />
+    </g>
+  </svg>
 </section>
